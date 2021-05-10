@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">Nutribi App</string>
+    <string name="label_email">Email</string>
+    <string name="hint_email">Masukkan Email</string>
+    <string name="label_password">Password</string>
+    <string name="hint_password">Masukkan Pasword</string>
+    <string name="action_login">Login</string>
+    <string name="action_register">Register</string>
+    <string name="label_no_account">Belum punya akun?</string>
+    <string name="label_name">Nama</string>
+    <string name="hint_name">"Masukkan Nama "</string>
+    <string name="label_confirm_password">Konfirmasi Password</string>
+    <string name="hint_confirm_password">Konfirmasi Password</string>
+    <string name="label_has_account">Sudah punya akun?</string>
 </resources>
