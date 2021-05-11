@@ -5,11 +5,39 @@
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textColor">@color/black</item>
-        <item name="android:fontFamily">@font/opensans_regular</item>
+        <item name="android:fontFamily">@font/montserrat_regular</item>
+    </style>
+
+    <style name="TextView.White">
+        <item name="android:textColor">@color/colorWhite</item>
+    </style>
+
+    <style name="TextView.Purple">
+        <item name="android:textColor">@color/colorPurple</item>
+    </style>
+
+    <style name="TextView.Medium">
+        <item name="fontFamily">@font/montserrat_medium</item>
+    </style>
+
+    <style name="TextView.Semibold">
+        <item name="fontFamily">@font/montserrat_semibold</item>
+    </style>
+
+    <style name="TextView.Semibold.Purple">
+        <item name="android:textColor">@color/colorPurple</item>
+    </style>
+
+    <style name="TextView.Medium.White">
+        <item name="android:textColor">@color/colorWhite</item>
     </style>
 
     <style name="TextView.Bold">
-        <item name="fontFamily">@font/opensans_bold</item>
+        <item name="fontFamily">@font/montserrat_bold</item>
+    </style>
+
+    <style name="TextView.Bold.OrangeDark">
+        <item name="android:textColor">@color/colorOrangeDark</item>
     </style>
 
 </resources>

@@ -8,8 +8,17 @@
     <string name="action_register">Register</string>
     <string name="label_no_account">Belum punya akun?</string>
     <string name="label_name">Nama</string>
-    <string name="hint_name">"Masukkan Nama "</string>
+    <string name="hint_name">Masukkan Nama</string>
     <string name="label_confirm_password">Konfirmasi Password</string>
     <string name="hint_confirm_password">Konfirmasi Password</string>
     <string name="label_has_account">Sudah punya akun?</string>
+    <string name="label_birth_date">Tanggal Lahir</string>
+    <string name="hint_birth_date">Masukkan Tanggal Lahir</string>
+    <string name="label_hi_mums">Hi Mums !</string>
+    <string name="label_sign_in_to_your_account">Sign in to your account</string>
+    <string name="label_mums_lagi_difase_apanih_yuk_dipilih">Mums lagi difase apanih? Yuk dipilih !</string>
+    <string name="label_fase_awal_menyusui">Fase Awal Menyusui</string>
+    <string name="label_0_6_bulan">0-6 Bulan</string>
+    <string name="label_7_24_bulan">7-24 Bulan</string>
+    <string name="label_fase_mpasi">Fase MPASI</string>
 </resources>

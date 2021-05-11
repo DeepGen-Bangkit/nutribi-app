@@ -9,7 +9,7 @@
         <item name="boxCornerRadiusTopEnd">@dimen/dimen_12dp</item>
         <item name="hintEnabled">false</item>
         <item name="boxBackgroundColor">@color/white</item>
-        <item name="boxStrokeColor">@drawable/edittext_outline_color</item>
+        <item name="boxStrokeColor">@drawable/edittext_outline_color_orange_dark</item>
     </style>
 
 </resources>

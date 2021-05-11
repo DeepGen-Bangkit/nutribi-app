@@ -46,4 +46,12 @@
     <color name="colorOrange4">#F69320</color>
     <color name="colorWhiteTransparent">#00FFFFFF</color>
     <color name="colorBlue">#3B5998</color>
+
+    <color name="colorWhiteFade">#FFFDF4</color>
+    <color name="colorOrangeFade">#ffbf4f</color>
+    <color name="colorOrangeDark">#fd9d45</color>
+    <color name="colorPurple">#9483FF</color>
+    <color name="colorGreenFade">#95ff7d</color>
+    <color name="colorGreenBrocolli">#3dcd47</color>
+
 </resources>

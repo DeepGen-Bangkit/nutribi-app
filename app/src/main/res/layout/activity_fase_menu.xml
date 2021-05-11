@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorOrangeFade"
+    android:orientation="vertical"
+    tools:context=".presentation.auth.FaseMenuActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/ic_bg_ornament_sayur"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/TextView.Medium.White"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_80dp"
+            android:gravity="center"
+            android:text="@string/label_mums_lagi_difase_apanih_yuk_dipilih"
+            android:textSize="28sp" />
+
+        <LinearLayout
+            android:id="@+id/btnFaseKehamilan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="42dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="42dp"
+            android:background="@drawable/rounded_white_fade_stroke_purple_background"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/TextView.Semibold.Purple"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="33dp"
+                android:layout_marginBottom="33dp"
+                android:gravity="center"
+                android:text="Fase Kehamilan"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btnFaseAwalMenyusui"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="42dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="42dp"
+            android:background="@drawable/rounded_white_fade_stroke_purple_background"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/TextView.Semibold.Purple"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="33dp"
+                android:gravity="center"
+                android:text="@string/label_fase_awal_menyusui"
+                android:textSize="18sp" />
+
+            <TextView
+                style="@style/TextView.Purple"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:gravity="center"
+                android:text="@string/label_0_6_bulan"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btnFaseMpasi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="42dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="42dp"
+            android:background="@drawable/rounded_white_fade_stroke_purple_background"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/TextView.Semibold.Purple"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="33dp"
+                android:gravity="center"
+                android:text="@string/label_fase_mpasi"
+                android:textSize="18sp" />
+
+            <TextView
+                style="@style/TextView.Purple"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:gravity="center"
+                android:text="@string/label_7_24_bulan"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

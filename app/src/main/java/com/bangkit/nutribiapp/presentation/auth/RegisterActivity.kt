@@ -22,11 +22,11 @@ class RegisterActivity : AppCompatActivity() {
 
     private fun initAction() {
         btnRegister.setOnClickListener {
-            Toast.makeText(this, "Login", Toast.LENGTH_SHORT).show()
+            startActivity(Intent(this, FaseMenuActivity::class.java))
         }
 
         btnLogin.setOnClickListener {
-            startActivity(Intent(this, RegisterActivity::class.java))
+            startActivity(Intent(this, LoginActivity::class.java))
         }
     }
 }
