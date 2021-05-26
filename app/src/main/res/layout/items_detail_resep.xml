@@ -66,7 +66,7 @@
             tools:text="4.2" />
 
         <TextView
-            style="@style/tv_rating"
+            android:id="@+id/tv_rating"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
