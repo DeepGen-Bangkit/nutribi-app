@@ -39,8 +39,6 @@ class DateUtils {
 }
 
 fun String.formatDate(): String {
-
-
     val inputFormat = SimpleDateFormat("dd/MM/yyyy", Locale.US)
     val outputFormat = SimpleDateFormat("yyyy-MM-dd", Locale.US)
 
