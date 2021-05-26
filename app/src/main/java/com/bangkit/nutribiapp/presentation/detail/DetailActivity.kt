@@ -1,4 +1,4 @@
-package com.bangkit.nutribiapp.detail
+package com.bangkit.nutribiapp.presentation.detail
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

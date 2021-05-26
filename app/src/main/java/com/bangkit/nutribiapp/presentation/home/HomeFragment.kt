@@ -1,4 +1,4 @@
-package com.bangkit.nutribiapp.home
+package com.bangkit.nutribiapp.presentation.home
 
 import android.os.Bundle
 import android.view.LayoutInflater
