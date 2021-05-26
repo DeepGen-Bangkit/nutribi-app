@@ -37,4 +37,13 @@
     <string name="hint_berat_badan">5 kg</string>
     <string name="label_ukur_lingkaran_kepala">Ukur Lingkaran Kepala</string>
     <string name="hint_ukur_lingkar_kepala">50 cm</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="label_proteion">Protein</string>
+    <string name="label_karbohidrat">Karbohidrat</string>
+    <string name="label_lemak">Lemak</string>
+    <string name="nutrition_left">%s g left</string>
+    <string name="title_air_putih">Air Putih</string>
+    <string name="title_sarapan">Sarapan</string>
+    <string name="title_makan_siang">Makan Siang</string>
+    <string name="title_makan_malam">Makan Malam</string>
 </resources>

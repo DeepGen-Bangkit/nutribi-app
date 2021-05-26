@@ -36,6 +36,10 @@
         <item name="fontFamily">@font/montserrat_bold</item>
     </style>
 
+    <style name="TextView.OrangeDark">
+        <item name="android:textColor">@color/colorOrangeDark</item>
+    </style>
+
     <style name="TextView.Bold.OrangeDark">
         <item name="android:textColor">@color/colorOrangeDark</item>
     </style>
