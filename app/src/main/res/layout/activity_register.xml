@@ -115,23 +115,24 @@
                         android:text="@string/label_birth_date"
                         android:textSize="12sp" />
 
-                    <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/tilBirthDate"
-                        style="@style/RoundedTextInputLayout"
+                    <LinearLayout
+                        android:id="@+id/containerMomBirthDate"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/dimen_8dp">
+                        android:layout_marginTop="@dimen/dimen_8dp"
+                        android:background="@drawable/rounded_white_fade_stroke_orange_dark_background">
 
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/edtBirthDate"
-                            android:layout_width="match_parent"
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvMomBirthDate"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:backgroundTint="@color/white"
-                            android:hint="@string/hint_birth_date"
-                            android:imeOptions="actionNext"
-                            android:inputType="text|date"
-                            android:lines="1" />
-                    </com.google.android.material.textfield.TextInputLayout>
+                            android:layout_marginStart="@dimen/dimen_16dp"
+                            android:layout_marginTop="@dimen/dimen_12dp"
+                            android:layout_marginBottom="@dimen/dimen_12dp"
+                            android:text="@string/hint_date"
+                            android:textSize="@dimen/text_size_16sp" />
+
+                    </LinearLayout>
 
                 </LinearLayout>
 
@@ -212,7 +213,6 @@
                 style="@style/TopRoundedCardView"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dimen_120dp"
-                android:layout_marginTop="@dimen/dimen_52dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent">

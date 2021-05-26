@@ -21,4 +21,20 @@
     <string name="label_0_6_bulan">0-6 Bulan</string>
     <string name="label_7_24_bulan">7-24 Bulan</string>
     <string name="label_fase_mpasi">Fase MPASI</string>
+    <string name="label_minggu_kehamilan">Minggu Kehamilan</string>
+    <string name="action_next">Selanjutnya</string>
+    <string name="label_umur_ibu">Umur Ibu</string>
+    <string name="hint_umur_ibu">27 tahun</string>
+    <string name="label_hpht">Hari Pertama Haid Terakhir</string>
+    <string name="hint_date">dd/mm/yyyy</string>
+    <string name="label_hpl">Hari Perkiraan Lahir</string>
+    <string name="label_tanggal_lahir_ibu">Tanggal Lahir Ibu</string>
+    <string name="label_baby_name">Nama Bayi</string>
+    <string name="label_tanggal_lahir">Tanggal Lahir</string>
+    <string name="hint_panjang_badan">100 cm</string>
+    <string name="label_panjang_badan">Panjang Badan (CM)</string>
+    <string name="label_berat_badan">Berat Badan (KG)</string>
+    <string name="hint_berat_badan">5 kg</string>
+    <string name="label_ukur_lingkaran_kepala">Ukur Lingkaran Kepala</string>
+    <string name="hint_ukur_lingkar_kepala">50 cm</string>
 </resources>

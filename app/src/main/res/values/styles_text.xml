@@ -40,4 +40,8 @@
         <item name="android:textColor">@color/colorOrangeDark</item>
     </style>
 
+    <style name="TextView.Bold.OrangeFade">
+        <item name="android:textColor">@color/colorOrangeFade</item>
+    </style>
+
 </resources>

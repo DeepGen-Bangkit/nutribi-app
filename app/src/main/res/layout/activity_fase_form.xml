@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhiteFade"
+    android:fillViewport="true"
+    tools:context=".presentation.auth.FaseFormActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvLabelFase"
+            style="@style/TextView.Bold.OrangeFade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_40dp"
+            android:layout_marginTop="53dp"
+            android:text="Form Kehamilan"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <include
+            android:id="@+id/containerFormKehamilan"
+            layout="@layout/layout_form_kehamilan"
+            android:visibility="gone"/>
+
+        <include
+            android:id="@+id/containerFormBayi"
+            layout="@layout/layout_form_bayi"
+            android:visibility="gone"/>
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="containerFormBayi, containerFormKehamilan" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnNextFormFase"
+            style="@style/Button.OrangeDark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_40dp"
+            android:layout_marginTop="@dimen/dimen_32dp"
+            android:enabled="true"
+            android:text="@string/action_next"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/barrier" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
+
