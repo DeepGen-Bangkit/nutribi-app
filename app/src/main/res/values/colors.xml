@@ -46,6 +46,9 @@
     <color name="colorOrange4">#F69320</color>
     <color name="colorWhiteTransparent">#00FFFFFF</color>
     <color name="colorBlue">#3B5998</color>
+    <color name="colorBlueDark">#303F9F</color>
+    <color name="colorGreyLight">#8A8A8A</color>
+    <color name="colorGold">#d3b113</color>
 
     <color name="colorWhiteFade">#FFFDF4</color>
     <color name="colorOrangeFade">#ffbf4f</color>
@@ -53,5 +56,9 @@
     <color name="colorPurple">#9483FF</color>
     <color name="colorGreenFade">#95ff7d</color>
     <color name="colorGreenBrocolli">#3dcd47</color>
+
+    <color name="colorBlackFade">#202020</color>
+    <color name="colorBlackDark">#151515</color>
+
 
 </resources>

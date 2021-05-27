@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/navMovie">
+
+    <fragment
+        android:id="@+id/navMovie"
+        android:name="com.bangkit.nutribiapp.presentation.main.fragment.HomeFragment"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/navTv"
+        android:name="com.bangkit.nutribiapp.presentation.main.fragment.RecipeFragment"
+        tools:layout="@layout/fragment_recipe" />
+
+    <fragment
+        android:id="@+id/navFavorite"
+        android:name="com.bangkit.nutribiapp.presentation.main.fragment.ProfileFragment"
+        tools:layout="@layout/fragment_profile" />
+
+</navigation>
