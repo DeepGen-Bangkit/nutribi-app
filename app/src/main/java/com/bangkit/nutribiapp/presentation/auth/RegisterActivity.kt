@@ -1,5 +1,6 @@
 package com.bangkit.nutribiapp.presentation.auth
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -17,6 +18,15 @@ import kotlinx.android.synthetic.main.activity_register.edtPassword
 import kotlinx.android.synthetic.main.activity_register.tvMomBirthDate
 
 class RegisterActivity : AppCompatActivity() {
+
+    companion object {
+
+        fun start(context: Context) {
+            val intent = Intent(context, RegisterActivity::class.java)
+            context.startActivity(intent)
+        }
+    }
+
 
     private val dateUtils: DateUtils by lazy {
         DateUtils()

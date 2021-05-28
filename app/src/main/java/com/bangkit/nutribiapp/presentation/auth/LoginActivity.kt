@@ -8,6 +8,8 @@ import androidx.appcompat.app.AppCompatActivity
 import com.bangkit.nutribiapp.R
 import com.bangkit.nutribiapp.model.LoginRequest
 import com.bangkit.nutribiapp.presentation.auth.viewmodel.AuthViewModel
+import com.bangkit.nutribiapp.presentation.main.MainActivity
+import com.bangkit.nutribiapp.utils.DataObject
 import kotlinx.android.synthetic.main.activity_login.btnLogin
 import kotlinx.android.synthetic.main.activity_login.btnRegister
 import kotlinx.android.synthetic.main.activity_login.edtEmail
@@ -29,7 +31,7 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun setDataDummy() {
-        edtEmail.setText("c@c.com")
+        edtEmail.setText("a@a.com")
         edtPassword.setText("12345678Aa")
     }
 
@@ -37,6 +39,8 @@ class LoginActivity : AppCompatActivity() {
         authViewModel.loginResponse.observe(this){
             if (it.token != null){
                 Toast.makeText(this, "Login Success", Toast.LENGTH_SHORT).show()
+                DataObject.loginResponse = it
+                MainActivity.start(this)
             }
         }
     }

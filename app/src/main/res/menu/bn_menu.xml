@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navMovie"
+        android:title="Home"
+        android:icon="@drawable/ic_home"/>
+
+    <item
+        android:id="@+id/navTv"
+        android:title="Recipe"
+        android:icon="@drawable/ic_home"/>
+
+    <item
+        android:id="@+id/navFavorite"
+        android:title="Profile"
+        android:icon="@drawable/ic_home"/>
+
+</menu>

@@ -1,14 +1,14 @@
 package com.bangkit.nutribiapp.model
 
 data class LoginResponse(
-    val token: String?,
-    val user: User?
+    var token: String? = null,
+    var user: User? = null
 )
 
 data class User(
-    val pk: Int?,
-    val username: Any?,
-    val email: String?,
-    val first_name: String?,
-    val last_name: String?
+    var pk: Int? = null,
+    var username: Any? = null,
+    var email: String? = null,
+    var first_name: String? = null,
+    var last_name: String? = null
 )

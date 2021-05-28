@@ -8,8 +8,10 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.bangkit.nutribiapp.R
 import com.bangkit.nutribiapp.presentation.auth.viewmodel.AuthViewModel
+import com.bangkit.nutribiapp.presentation.main.MainActivity
 import com.bangkit.nutribiapp.utils.DataObject.registerRequest
 import com.bangkit.nutribiapp.utils.DateUtils
+import com.bangkit.nutribiapp.utils.formatDate
 import kotlinx.android.synthetic.main.activity_fase_form.btnNextFormFase
 import kotlinx.android.synthetic.main.activity_fase_form.containerFormBayi
 import kotlinx.android.synthetic.main.activity_fase_form.containerFormKehamilan
@@ -54,12 +56,21 @@ class FaseFormActivity : AppCompatActivity() {
         }
 
         initAction()
+
+        // Just For Testing Purpose
+        setDataDummy()
+    }
+
+    private fun setDataDummy() {
+        tvHpht.text = "12/12/2000"
+        tvHpl.text = "12/12/2000"
     }
 
     private fun initObserver() {
         authViewModel.registerResponse.observe(this){
             if(it.msg != null){
                 Toast.makeText(this, "Register Success", Toast.LENGTH_SHORT).show()
+                MainActivity.start(this)
             }
         }
     }
@@ -71,7 +82,10 @@ class FaseFormActivity : AppCompatActivity() {
         dateUtils.showCalenderPicker(this, tvBabyBirthDate, containerBabyBirthDate)
 
         btnNextFormFase.setOnClickListener {
-//            Log.d("TAG", "initAction: " + tvMomBirthDate.text.toString().formatDate())
+            with(registerRequest){
+                hpht = tvHpht.text.toString().formatDate()
+                hpl = tvHpl.text.toString().formatDate()
+            }
             authViewModel.postRegister(registerRequest)
         }
     }
