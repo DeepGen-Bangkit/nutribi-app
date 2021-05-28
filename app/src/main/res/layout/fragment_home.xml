@@ -22,7 +22,9 @@
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="ContentDescription" />
 
+
         <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/appCompatTextView4"
             style="@style/TextView.Bold"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -34,6 +36,47 @@
             app:layout_constraintEnd_toEndOf="@id/bg_home"
             app:layout_constraintStart_toStartOf="@+id/bg_home"
             app:layout_constraintTop_toTopOf="@+id/bg_home" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:indeterminateOnly="false"
+            android:progressDrawable="@drawable/progress_karbo"
+            app:layout_constraintBottom_toBottomOf="@+id/bg_home"
+            app:layout_constraintEnd_toEndOf="@+id/bg_home"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appCompatTextView4"
+            tools:progress="70" />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="@+id/bg_home"
+            app:layout_constraintEnd_toEndOf="@+id/progressBar"
+            app:layout_constraintStart_toStartOf="@+id/progressBar"
+            app:layout_constraintTop_toTopOf="@+id/progressBar"
+            app:layout_constraintVertical_bias="0.39">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_cal_sum"
+                style="@style/TextView.Bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                tools:text="450" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/appCompatTextView5"
+                style="@style/TextView.Bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="KCAL LEFT" />
+        </LinearLayout>
+
 
         <ImageButton
             android:id="@+id/btn_back"
