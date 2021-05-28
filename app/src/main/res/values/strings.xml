@@ -46,4 +46,6 @@
     <string name="title_sarapan">Sarapan</string>
     <string name="title_makan_siang">Makan Siang</string>
     <string name="title_makan_malam">Makan Malam</string>
+    <string name="tab_text_1">Bahan - Bahan</string>
+    <string name="tab_text_2">Petunjuk</string>
 </resources>

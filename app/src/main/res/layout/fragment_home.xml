@@ -29,7 +29,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
-            android:text="Kebutuhan hari ini"
+            android:text="Minggu Ke - 2 Masa Kehamilan"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="@id/bg_home"
             app:layout_constraintStart_toStartOf="@+id/bg_home"
@@ -46,6 +46,21 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/bg_home"
             tools:ignore="ContentDescription" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:background="@android:color/transparent"
+            android:drawableStart="@drawable/ic_baseline_calendar_today_24"
+            android:drawablePadding="@dimen/dimen_4dp"
+            android:minWidth="@dimen/dimen_0dp"
+            android:minHeight="0dp"
+            android:text="Hari ini"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_back"
+            app:layout_constraintStart_toEndOf="@+id/btn_back"
+            app:layout_constraintTop_toTopOf="@+id/btn_back" />
 
         <ImageButton
             android:id="@+id/btn_next"
@@ -88,7 +103,7 @@
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginBottom="8dp"
-                    android:src="@drawable/ic_breakfast"
+                    android:src="@drawable/ic_home_breakfast"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
@@ -96,11 +111,11 @@
 
                 <TextView
                     android:id="@+id/tv_breakfast"
+                    style="@style/TextView.Semibold"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:text="@string/title_sarapan"
-                    style="@style/TextView.Semibold"
                     app:layout_constraintBottom_toBottomOf="@+id/imageView"
                     app:layout_constraintStart_toEndOf="@+id/imageView"
                     app:layout_constraintTop_toTopOf="@+id/imageView" />
@@ -147,18 +162,18 @@
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginBottom="8dp"
-                    android:src="@drawable/ic_lunch"
+                    android:src="@drawable/ic_home_lunch"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
+                    style="@style/TextView.Semibold"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_marginStart="16dp"
                     android:text="@string/title_makan_siang"
-                    style="@style/TextView.Semibold"
                     app:layout_constraintBottom_toBottomOf="@+id/ic_lunch"
                     app:layout_constraintStart_toEndOf="@+id/ic_lunch"
                     app:layout_constraintTop_toTopOf="@+id/ic_lunch" />
@@ -209,18 +224,18 @@
                     android:layout_marginTop="8dp"
                     android:layout_marginBottom="8dp"
                     android:background="@android:color/transparent"
-                    android:src="@drawable/ic_dinner"
+                    android:src="@drawable/ic_home_dinner"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
+                    style="@style/TextView.Semibold"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_marginStart="16dp"
                     android:text="@string/title_makan_malam"
-                    style="@style/TextView.Semibold"
                     app:layout_constraintBottom_toBottomOf="@+id/ic_dinner"
                     app:layout_constraintStart_toEndOf="@+id/ic_dinner"
                     app:layout_constraintTop_toTopOf="@+id/ic_dinner" />
