@@ -19,7 +19,7 @@ package com.bangkit.nutribiapp.presentation.objectdetection
  * limitations under the License.
  */
 
-//package org.tensorflow.codelabs.objectdetection
+
 
 import android.app.Activity
 import android.content.ActivityNotFoundException
@@ -297,7 +297,7 @@ class ObjectDetection : AppCompatActivity(), View.OnClickListener {
                 photoFile?.also {
                     val photoURI: Uri = FileProvider.getUriForFile(
                         this,
-                        "org.tensorflow.codelabs.objectdetection.fileprovider",
+                        "com.bangkit.nutribiapp.fileprovider",
                         it
                     )
                     takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, photoURI)
