@@ -11,6 +11,7 @@ import com.bangkit.nutribiapp.presentation.auth.viewmodel.AuthViewModel
 import com.bangkit.nutribiapp.utils.DataObject.registerRequest
 import com.bangkit.nutribiapp.utils.DateUtils
 import kotlinx.android.synthetic.main.activity_fase_form.btnNextFormFase
+import kotlinx.android.synthetic.main.activity_fase_form.btnObjectDetection
 import kotlinx.android.synthetic.main.activity_fase_form.containerFormBayi
 import kotlinx.android.synthetic.main.activity_fase_form.containerFormKehamilan
 import kotlinx.android.synthetic.main.activity_fase_form.tvLabelFase
@@ -21,6 +22,7 @@ import kotlinx.android.synthetic.main.layout_form_kehamilan.containerHpl
 import kotlinx.android.synthetic.main.layout_form_kehamilan.tvHpht
 import kotlinx.android.synthetic.main.layout_form_kehamilan.tvHpl
 import org.koin.android.viewmodel.ext.android.viewModel
+import com.bangkit.nutribiapp.presentation.objectdetection.ObjectDetection
 
 class FaseFormActivity : AppCompatActivity() {
 
@@ -73,6 +75,10 @@ class FaseFormActivity : AppCompatActivity() {
         btnNextFormFase.setOnClickListener {
 //            Log.d("TAG", "initAction: " + tvMomBirthDate.text.toString().formatDate())
             authViewModel.postRegister(registerRequest)
+        }
+        btnObjectDetection.setOnClickListener {
+            val intent = Intent(this, ObjectDetection::class.java)
+            startActivity(intent)
         }
     }
 }

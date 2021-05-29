@@ -46,4 +46,7 @@
     <string name="title_sarapan">Sarapan</string>
     <string name="title_makan_siang">Makan Siang</string>
     <string name="title_makan_malam">Makan Malam</string>
+    <string name="tv_take_photo">Take photo</string>
+    <string name="tv_description">Select a preset image or take a new photo</string>
+    <string name="tv_placeholder">Object detection demo</string>
 </resources>

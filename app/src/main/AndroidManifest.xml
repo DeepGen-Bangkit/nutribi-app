@@ -19,7 +19,8 @@
 
         </activity>
         <activity android:name="com.bangkit.nutribiapp.presentation.ingredient.IngredientActivity"></activity>
-        <activity android:name="com.bangkit.nutribiapp.presentation.detail.DetailActivity" />
+
+        <activity android:name="com.bangkit.nutribiapp.presentation.objectdetection.ObjectDetection" />
         <activity android:name=".MainActivity" />
         <activity android:name=".presentation.auth.LoginActivity">
             <intent-filter>
