@@ -81,12 +81,24 @@
         android:id="@+id/captureImageFab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:layout_above="@+id/btnNextDetection"
         android:layout_centerHorizontal="true"
         android:layout_gravity="center|bottom"
         android:layout_margin="16dp"
         android:drawableLeft="@drawable/ic_camera"
         android:text="@string/tv_take_photo"
         android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btnNextDetection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center|bottom"
+        android:layout_marginBottom="@dimen/dimen_16dp"
+        android:text="@string/action_next"
+        android:textAllCaps="false" />
+
 
 </RelativeLayout>

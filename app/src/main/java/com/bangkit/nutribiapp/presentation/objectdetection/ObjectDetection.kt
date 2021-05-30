@@ -19,8 +19,6 @@ package com.bangkit.nutribiapp.presentation.objectdetection
  * limitations under the License.
  */
 
-
-
 import android.app.Activity
 import android.content.ActivityNotFoundException
 import android.content.Intent
@@ -54,9 +52,8 @@ import kotlin.jvm.Throws
 
 class ObjectDetection : AppCompatActivity(), View.OnClickListener {
 
-//class ObjectDetection {
-
     companion object {
+
         const val TAG = "TFLite - ODT"
         const val REQUEST_IMAGE_CAPTURE: Int = 1
         private const val MAX_FONT_SIZE = 96F
@@ -118,6 +115,9 @@ class ObjectDetection : AppCompatActivity(), View.OnClickListener {
             R.id.imgSampleThree -> {
                 setViewAndDetect(getSampleImage(R.drawable.img_meal_three))
             }
+            R.id.btnNextDetection -> {
+                
+            }
         }
     }
 
@@ -142,21 +142,19 @@ class ObjectDetection : AppCompatActivity(), View.OnClickListener {
         val resultToDisplay = results.map {
             // Get the top-1 category and craft the display text
             val category = it.categories.first()
-            var cobaan = "=="
-            val text = "${category.label},${cobaan} ,${category.score.times(100).toInt()}%"
+            val text = "${category.label},== ,${category.score.times(100).toInt()}%"
 
             // Create a data object to display the detection result
             DetectionResult(it.boundingBox, text)
         }
-// Draw the detection result on the bitmap and show it.
+        // Draw the detection result on the bitmap and show it.
         val imgWithResult = drawDetectionResult(bitmap, resultToDisplay)
         runOnUiThread {
             inputImageView.setImageBitmap(imgWithResult)
         }
-
     }
 
-    private fun debugPrint(results : List<Detection>) {
+    private fun debugPrint(results: List<Detection>) {
         for ((i, obj) in results.withIndex()) {
             val box = obj.boundingBox
 
@@ -170,7 +168,6 @@ class ObjectDetection : AppCompatActivity(), View.OnClickListener {
             }
         }
     }
-
 
     /**
      * setViewAndDetect(bitmap: Bitmap)
@@ -327,7 +324,6 @@ class ObjectDetection : AppCompatActivity(), View.OnClickListener {
             pen.style = Paint.Style.STROKE
             val box = it.boundingBox
             canvas.drawRect(box, pen)
-
 
             val tagSize = Rect(0, 0, 0, 0)
 
