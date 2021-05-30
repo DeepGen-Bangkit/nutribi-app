@@ -5,12 +5,16 @@ plugins {
 }
 
 android {
+    aaptOptions {
+        noCompress "tflite"
+        noCompress "lite"
+    }
     compileSdkVersion 30
     buildToolsVersion "30.0.3"
 
     defaultConfig {
         applicationId "com.bangkit.nutribiapp"
-        minSdkVersion 19
+        minSdkVersion 21
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
@@ -101,4 +105,17 @@ dependencies {
 
     //AnyChart
     implementation 'com.github.AnyChart:AnyChart-Android:1.1.2'
+//
+//    implementation 'androidx.core:core-ktx:1.3.2'
+//    implementation 'androidx.appcompat:appcompat:1.2.0'
+//    implementation 'com.google.android.material:material:1.3.0'
+//    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+//    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.2'
+//    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.3.0'
+
+    // Exif Interface
+    implementation 'androidx.exifinterface:exifinterface:1.3.2'
+
+    //Tensorflow
+    implementation 'org.tensorflow:tensorflow-lite-task-vision:0.2.0'
 }

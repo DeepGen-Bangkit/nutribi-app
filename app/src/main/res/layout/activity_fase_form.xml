@@ -54,6 +54,19 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/barrier" />
 
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnObjectDetection"
+            style="@style/Button.AppleGreen"
+            android:layout_width="219dp"
+            android:layout_height="61dp"
+            android:layout_marginHorizontal="@dimen/dimen_40dp"
+            android:layout_marginTop="136dp"
+            android:enabled="true"
+            android:text="Detect Image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/barrier" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </ScrollView>

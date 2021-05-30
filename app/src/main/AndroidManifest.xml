@@ -2,7 +2,14 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.bangkit.nutribiapp">
 
+    <queries>
+        <intent>
+            <action android:name="android.media.action.IMAGE_CAPTURE" />
+        </intent>
+    </queries>
+
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
 
     <application
         android:name=".MyApplication"
@@ -24,14 +31,26 @@
         <activity android:name=".presentation.main.MainActivity">
 
         </activity>
-        <activity android:name=".presentation.auth.LoginActivity">
+        <activity android:name=".presentation.auth.LoginActivity"/>
+
+        <activity android:name="com.bangkit.nutribiapp.presentation.objectdetection.ObjectDetection" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity android:name=".presentation.auth.RegisterActivity" />
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.bangkit.nutribiapp.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
     </application>
 
 </manifest>
