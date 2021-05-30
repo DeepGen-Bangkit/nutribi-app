@@ -13,33 +13,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-<<<<<<< HEAD
-        <activity android:name=".presentation.recipe.IngredientRecipeFragment"></activity>
+        <activity android:name=".presentation.nutrition.DetailNutritionActivity" />
         <activity android:name=".presentation.recipe.DetailRecipeActivity" />
         <activity android:name=".presentation.scanner.ScannerActivity" />
         <activity android:name=".presentation.scanner.ResultScannerActivity" />
         <activity android:name=".presentation.auth.FaseFormActivity" />
         <activity android:name=".presentation.auth.FaseMenuActivity" />
         <activity android:name=".presentation.ingredient.IngredientActivity" />
-        <activity android:name=".presentation.detail.DetailActivity" />
-        <activity android:name=".MainActivity" />
-=======
-        <activity android:name=".presentation.auth.FaseFormActivity">
-
-        </activity>
-        <activity android:name=".presentation.auth.FaseMenuActivity" >
-
-        </activity>
-        <activity android:name="com.bangkit.nutribiapp.presentation.ingredient.IngredientActivity">
-
-        </activity>
-        <activity android:name="com.bangkit.nutribiapp.presentation.detail.DetailActivity" >
-
-        </activity>
-        <activity android:name=".presentation.main.MainActivity">
-
-        </activity>
->>>>>>> b3ad86f192d97d178ad49d5f11495492d11c211a
+        <activity android:name=".presentation.detail.SelectedFoodActivity" />
+        <activity android:name=".presentation.main.MainActivity" />
         <activity android:name=".presentation.auth.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

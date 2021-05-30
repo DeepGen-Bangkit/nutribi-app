@@ -11,11 +11,9 @@ import com.bangkit.nutribiapp.model.IngredientResponse
 import com.bangkit.nutribiapp.model.RecipeResponse
 import com.bangkit.nutribiapp.presentation.detail.adapter.RecipeAdapter
 import com.bangkit.nutribiapp.presentation.detail.adapter.SelectedIngredientAdapter
-import kotlinx.android.synthetic.main.activity_detail.rv_bahan
-import kotlinx.android.synthetic.main.activity_detail.rv_resep
-import kotlinx.android.synthetic.main.activity_ingredient.rv_ingredients
+import kotlinx.android.synthetic.main.activity_selected_food.*
 
-class DetailActivity : AppCompatActivity() {
+class SelectedFoodActivity : AppCompatActivity() {
 
     private val recipeAdapter: RecipeAdapter by lazy {
         RecipeAdapter()
@@ -29,14 +27,14 @@ class DetailActivity : AppCompatActivity() {
     companion object {
 
         fun start(context: Context) {
-            val intent = Intent(context, DetailActivity::class.java)
+            val intent = Intent(context, SelectedFoodActivity::class.java)
             context.startActivity(intent)
         }
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_detail)
+        setContentView(R.layout.activity_selected_food)
 
         initRecyclerView()
 
@@ -77,13 +75,13 @@ class DetailActivity : AppCompatActivity() {
 
     private fun initRecyclerView() {
         rv_bahan.apply {
-            layoutManager = LinearLayoutManager(this@DetailActivity)
+            layoutManager = LinearLayoutManager(this@SelectedFoodActivity)
             adapter = selectedIngredientAdapter
             setRecycledViewPool(RecyclerView.RecycledViewPool())
         }
 
         rv_resep.apply {
-            layoutManager = LinearLayoutManager(this@DetailActivity)
+            layoutManager = LinearLayoutManager(this@SelectedFoodActivity)
             adapter = recipeAdapter
             setRecycledViewPool(RecyclerView.RecycledViewPool())
         }

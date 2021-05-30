@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="16sp">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/img_ingredient"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@color/colorGrey"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_name"
+        style="@style/TextView.Bold.Purple"
+        android:layout_width="@dimen/dimen_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/img_ingredient"
+        app:layout_constraintTop_toTopOf="@+id/img_ingredient"
+        tools:text="Telur" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_karbo"
+        style="@style/TextView"
+        android:layout_width="@dimen/dimen_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/tv_name"
+        app:layout_constraintTop_toBottomOf="@+id/tv_name"
+        tools:text="@string/label_karbohidrat" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_protein"
+        style="@style/TextView"
+        android:layout_width="@dimen/dimen_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="@+id/tv_karbo"
+        app:layout_constraintTop_toBottomOf="@+id/tv_karbo"
+        tools:text="@string/label_proteion" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_fat"
+        style="@style/TextView"
+        android:layout_width="@dimen/dimen_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="@+id/tv_protein"
+        app:layout_constraintTop_toBottomOf="@+id/tv_protein"
+        tools:text="@string/label_lemak" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhiteFade"
+    tools:context=".presentation.nutrition.DetailNutritionActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ProgressBar
+            android:id="@+id/progress_cal"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:indeterminateOnly="false"
+            android:progressDrawable="@drawable/progress_karbo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:progress="50" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/appCompatTextView6"
+            style="@style/TextView.Bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="450"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/progress_cal"
+            app:layout_constraintEnd_toEndOf="@+id/progress_cal"
+            app:layout_constraintStart_toStartOf="@+id/progress_cal"
+            app:layout_constraintTop_toTopOf="@+id/progress_cal" />
+
+        <ProgressBar
+            android:id="@+id/progress_karbo"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:indeterminateOnly="false"
+            android:progressDrawable="@drawable/progress_karbo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/progress_cal"
+            app:layout_constraintTop_toTopOf="@+id/progress_cal"
+            tools:progress="40" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_karbo"
+            style="@style/TextView.Bold"
+            android:layout_marginStart="8dp"
+            app:layout_constraintStart_toEndOf="@+id/progress_karbo"
+            app:layout_constraintTop_toTopOf="@+id/progress_karbo"
+            tools:text="50g" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/label_karbo"
+            style="@style/TextView"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@+id/tv_karbo"
+            app:layout_constraintTop_toBottomOf="@+id/tv_karbo"
+            tools:text="@string/label_karbohidrat" />
+
+        <ProgressBar
+            android:id="@+id/progress_protein"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:indeterminateOnly="false"
+            android:progressDrawable="@drawable/progress_protein"
+            app:layout_constraintStart_toStartOf="@+id/progress_karbo"
+            app:layout_constraintTop_toBottomOf="@+id/progress_karbo"
+            tools:progress="70" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_protein"
+            style="@style/TextView.Bold"
+            android:layout_marginStart="8dp"
+            app:layout_constraintStart_toEndOf="@+id/progress_protein"
+            app:layout_constraintTop_toBottomOf="@+id/progress_karbo"
+            tools:text="70g" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/label_protein"
+            style="@style/TextView"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@+id/tv_protein"
+            app:layout_constraintTop_toBottomOf="@+id/tv_protein"
+            tools:text="@string/label_proteion" />
+
+        <ProgressBar
+            android:id="@+id/progress_fat"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:indeterminateOnly="false"
+            android:progressDrawable="@drawable/progress_fat"
+            app:layout_constraintBottom_toBottomOf="@+id/progress_cal"
+            app:layout_constraintStart_toStartOf="@+id/progress_protein"
+            app:layout_constraintTop_toBottomOf="@+id/progress_protein"
+            tools:progress="88" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_fat"
+            style="@style/TextView.Bold"
+            android:layout_marginStart="8dp"
+            app:layout_constraintStart_toEndOf="@+id/progress_fat"
+            app:layout_constraintTop_toBottomOf="@+id/progress_protein"
+            tools:text="30g" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/label_fat"
+            style="@style/TextView"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@+id/tv_fat"
+            app:layout_constraintTop_toBottomOf="@+id/tv_fat"
+            tools:text="@string/label_lemak" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/label_action"
+            style="@style/TextView.Bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Makanan yang kamu pilih"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/progress_cal"
+            app:layout_constraintTop_toBottomOf="@+id/progress_cal" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_ingredients"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/label_action"
+            tools:listitem="@layout/items_detail_ingredient" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.core.widget.NestedScrollView>
