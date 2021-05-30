@@ -29,16 +29,16 @@
         <activity android:name=".presentation.detail.DetailActivity" />
 
         <activity android:name=".presentation.main.MainActivity">
-
-        </activity>
-        <activity android:name=".presentation.auth.LoginActivity"/>
-
-        <activity android:name="com.bangkit.nutribiapp.presentation.objectdetection.ObjectDetection" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".presentation.auth.LoginActivity"/>
+
+        <activity android:name="com.bangkit.nutribiapp.presentation.objectdetection.ObjectDetection" >
+
         </activity>
 
         <activity android:name=".presentation.auth.RegisterActivity" />
