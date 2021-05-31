@@ -20,19 +20,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".presentation.recipe.DetailRecipeActivity" >
-
-        </activity>
+        <activity android:name=".presentation.ingredient.detail.DetailIngredientActivity"></activity>
+        <activity android:name=".presentation.recipe.DetailRecipeActivity"></activity>
         <activity android:name=".presentation.nutrition.DetailNutritionActivity" />
         <activity android:name=".presentation.scanner.ScannerActivity" />
         <activity android:name=".presentation.scanner.ResultScannerActivity" />
         <activity android:name=".presentation.auth.FaseFormActivity" />
         <activity android:name=".presentation.auth.FaseMenuActivity" />
         <activity android:name=".presentation.ingredient.IngredientActivity" />
-
-        <activity android:name=".presentation.main.MainActivity">
-
-        </activity>
+        <activity android:name=".presentation.main.MainActivity"></activity>
         <activity android:name=".presentation.detail.SelectedFoodActivity" />
         <activity android:name=".presentation.auth.LoginActivity">
             <intent-filter>
@@ -41,12 +37,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name="com.bangkit.nutribiapp.presentation.objectdetection.ObjectDetection" >
-
-        </activity>
-
+        <activity android:name=".presentation.objectdetection.ObjectDetection"></activity>
         <activity android:name=".presentation.auth.RegisterActivity" />
+
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="com.bangkit.nutribiapp.fileprovider"

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhiteFade"
+    tools:context=".presentation.ingredient.detail.DetailIngredientActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/bg_sayurang"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@drawable/bg_sayuran"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_name"
+            style="@style/TextView.Bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="16dp"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toBottomOf="@+id/bg_sayurang"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="Telur" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_nutrition"
+            style="@style/TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/bg_sayurang"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="150 gram" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_cal"
+            style="@style/TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bg_sayurang"
+            tools:text="165 kcal" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/label_detail"
+            style="@style/TextView.Semibold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Detail Nutrisi"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/tv_cal"
+            app:layout_constraintTop_toBottomOf="@+id/tv_cal" />
+
+        <ProgressBar
+            android:id="@+id/progress_protein"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginTop="8dp"
+            android:indeterminateOnly="false"
+            android:progressDrawable="@drawable/progress_protein"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/label_detail"
+            tools:progress="65" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_score_proteion"
+            style="@style/TextView.Bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/progress_protein"
+            app:layout_constraintEnd_toEndOf="@+id/progress_protein"
+            app:layout_constraintStart_toStartOf="@+id/progress_protein"
+            app:layout_constraintTop_toTopOf="@+id/progress_protein"
+            tools:text="50g" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/label_protein"
+            style="@style/TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/label_proteion"
+            android:textSize="@dimen/text_size_12sp"
+            app:layout_constraintEnd_toEndOf="@+id/progress_protein"
+            app:layout_constraintStart_toStartOf="@+id/progress_protein"
+            app:layout_constraintTop_toBottomOf="@+id/progress_protein" />
+
+        <ProgressBar
+            android:id="@+id/progress_karbo"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:indeterminateOnly="false"
+            android:progressDrawable="@drawable/progress_karbo"
+            app:layout_constraintBottom_toBottomOf="@+id/progress_protein"
+            app:layout_constraintEnd_toStartOf="@+id/progress_protein"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/progress_protein"
+            tools:progress="65" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_score_karbo"
+            style="@style/TextView.Bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/progress_karbo"
+            app:layout_constraintEnd_toEndOf="@+id/progress_karbo"
+            app:layout_constraintStart_toStartOf="@+id/progress_karbo"
+            app:layout_constraintTop_toTopOf="@+id/progress_karbo"
+            tools:text="50g" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/label_karbo"
+            style="@style/TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/label_karbohidrat"
+            android:textSize="@dimen/text_size_12sp"
+            app:layout_constraintEnd_toEndOf="@+id/progress_karbo"
+            app:layout_constraintStart_toStartOf="@+id/progress_karbo"
+            app:layout_constraintTop_toBottomOf="@+id/progress_karbo" />
+
+        <ProgressBar
+            android:id="@+id/progress_fat"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:indeterminateOnly="false"
+            android:progressDrawable="@drawable/progress_fat"
+            app:layout_constraintBottom_toBottomOf="@+id/progress_protein"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/progress_protein"
+            app:layout_constraintTop_toTopOf="@+id/progress_protein"
+            tools:progress="65" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_score_fat"
+            style="@style/TextView.Bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/progress_fat"
+            app:layout_constraintEnd_toEndOf="@+id/progress_fat"
+            app:layout_constraintStart_toStartOf="@+id/progress_fat"
+            app:layout_constraintTop_toTopOf="@+id/progress_fat"
+            tools:text="50g" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/label_fat"
+            style="@style/TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/label_lemak"
+            android:textSize="@dimen/text_size_12sp"
+            app:layout_constraintEnd_toEndOf="@+id/progress_fat"
+            app:layout_constraintStart_toStartOf="@+id/progress_fat"
+            app:layout_constraintTop_toBottomOf="@+id/progress_fat" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_nutrition"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/label_protein"
+            tools:listitem="@layout/items_nutrition" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.core.widget.NestedScrollView>
