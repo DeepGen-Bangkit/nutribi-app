@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.bangkit.nutribiapp.R
 import com.bangkit.nutribiapp.model.IngredientResponse
-import com.bangkit.nutribiapp.presentation.detail.DetailActivity
+import com.bangkit.nutribiapp.presentation.detail.SelectedFoodActivity
 import com.bangkit.nutribiapp.presentation.ingredient.adapter.IngredientAdapter
 import kotlinx.android.synthetic.main.activity_ingredient.btnNextIngredient
 import kotlinx.android.synthetic.main.activity_ingredient.rv_ingredients
@@ -40,7 +40,7 @@ class IngredientActivity : AppCompatActivity() {
 
     private fun initAction() {
         btnNextIngredient.setOnClickListener{
-            DetailActivity.start(this)
+            SelectedFoodActivity.start(this)
         }
     }
 

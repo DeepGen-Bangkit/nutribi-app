@@ -23,16 +23,17 @@
         <activity android:name=".presentation.recipe.DetailRecipeActivity" >
 
         </activity>
+        <activity android:name=".presentation.nutrition.DetailNutritionActivity" />
         <activity android:name=".presentation.scanner.ScannerActivity" />
         <activity android:name=".presentation.scanner.ResultScannerActivity" />
         <activity android:name=".presentation.auth.FaseFormActivity" />
         <activity android:name=".presentation.auth.FaseMenuActivity" />
         <activity android:name=".presentation.ingredient.IngredientActivity" />
-        <activity android:name=".presentation.detail.DetailActivity" />
 
         <activity android:name=".presentation.main.MainActivity">
 
         </activity>
+        <activity android:name=".presentation.detail.SelectedFoodActivity" />
         <activity android:name=".presentation.auth.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

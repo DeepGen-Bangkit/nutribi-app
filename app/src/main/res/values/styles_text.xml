@@ -24,6 +24,10 @@
         <item name="android:textColor">@color/colorPurple</item>
     </style>
 
+    <style name="TextView.Bold.Purple">
+        <item name="android:textColor">@color/colorPurple</item>
+    </style>
+
     <style name="TextView.Medium.White">
         <item name="android:textColor">@color/colorWhite</item>
     </style>

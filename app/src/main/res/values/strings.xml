@@ -43,5 +43,6 @@
     <string name="label_karbohidrat">Karbohidrat</string>
     <string name="label_proteion">Protein</string>
     <string name="hello_blank_fragment">Hello Blank Fragment</string>
+    <string name="label_lemak">Lemak</string>
 
 </resources>

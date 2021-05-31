@@ -1,4 +1,4 @@
-package com.bangkit.nutribiapp.presentation.recipe
+package com.bangkit.nutribiapp.presentation.recipe.instruction
 
 import android.os.Bundle
 import android.view.LayoutInflater
