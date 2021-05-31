@@ -138,11 +138,11 @@ class ObjectDetection : AppCompatActivity(), View.OnClickListener {
         val image = TensorImage.fromBitmap(bitmap)
         val options = ObjectDetector.ObjectDetectorOptions.builder()
             .setMaxResults(5)
-            .setScoreThreshold(0.5f)
+            .setScoreThreshold(0.1f)
             .build()
         val detector = ObjectDetector.createFromFileAndOptions(
             this, // the application context
-            "salad.tflite", // must be same as the filename in assets folder
+            "model.tflite", // must be same as the filename in assets folder
             options
         )
         val results = detector.detect(image)

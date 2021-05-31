@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.observe
 import com.bangkit.nutribiapp.R
 import com.bangkit.nutribiapp.presentation.auth.viewmodel.AuthViewModel
 import com.bangkit.nutribiapp.presentation.main.MainActivity
@@ -25,6 +26,7 @@ import kotlinx.android.synthetic.main.layout_form_kehamilan.tvHpht
 import kotlinx.android.synthetic.main.layout_form_kehamilan.tvHpl
 import org.koin.android.viewmodel.ext.android.viewModel
 import com.bangkit.nutribiapp.presentation.objectdetection.ObjectDetection
+import com.bangkit.nutribiapp.presentation.scanner.ResultScannerActivity
 
 class FaseFormActivity : AppCompatActivity() {
 
@@ -91,8 +93,9 @@ class FaseFormActivity : AppCompatActivity() {
             authViewModel.postRegister(registerRequest)
         }
         btnObjectDetection.setOnClickListener {
-            val intent = Intent(this, ObjectDetection::class.java)
-            startActivity(intent)
+//            val intent = Intent(this, ObjectDetection::class.java)
+//            startActivity(intent)
+            ObjectDetection.start(this)
         }
     }
 }
