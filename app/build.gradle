@@ -118,4 +118,7 @@ dependencies {
 
     //Tensorflow
     implementation 'org.tensorflow:tensorflow-lite-task-vision:0.2.0'
+
+    // Rounded ImageView
+    implementation 'com.makeramen:roundedimageview:2.3.0'
 }

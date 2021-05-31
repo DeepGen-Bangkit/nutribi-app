@@ -10,16 +10,18 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <androidx.appcompat.widget.AppCompatImageView
+        <com.makeramen.roundedimageview.RoundedImageView
             android:id="@+id/img_recipe"
             android:layout_width="300dp"
             android:layout_height="300dp"
             android:layout_marginTop="16dp"
+            android:elevation="5dp"
             android:scaleType="fitXY"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:background="@color/colorGrey" />
+            app:riv_corner_radius="10dp"
+            tools:src="@color/colorGrey" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tv_name"
@@ -129,7 +131,6 @@
                 android:text="@string/label_proteion" />
         </LinearLayout>
 
-
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabs"
             android:layout_width="match_parent"
@@ -139,7 +140,9 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/ll_protein"
-            app:tabTextAppearance="@style/TextView.Bold.OrangeDark" />
+            app:tabIndicatorColor="@color/colorCarrotOrange"
+            app:tabSelectedTextColor="@color/colorCarrotOrange"
+            app:tabTextColor="@color/colorPurple" />
 
         <androidx.viewpager2.widget.ViewPager2
             android:id="@+id/view_pager"

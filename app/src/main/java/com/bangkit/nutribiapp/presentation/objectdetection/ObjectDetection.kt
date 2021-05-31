@@ -18,6 +18,7 @@ package com.bangkit.nutribiapp.presentation.objectdetection
 
 import android.app.Activity
 import android.content.ActivityNotFoundException
+import android.content.Context
 import android.content.Intent
 import android.graphics.*
 import android.net.Uri
@@ -56,7 +57,14 @@ class ObjectDetection : AppCompatActivity(), View.OnClickListener {
         const val TAG = "TFLite - ODT"
         const val REQUEST_IMAGE_CAPTURE: Int = 1
         private const val MAX_FONT_SIZE = 96F
+
+        fun start(context: Context) {
+            val intent = Intent(context, ObjectDetection::class.java)
+            context.startActivity(intent)
+        }
     }
+
+
 
     private lateinit var captureImageFab: Button
     private lateinit var inputImageView: ImageView

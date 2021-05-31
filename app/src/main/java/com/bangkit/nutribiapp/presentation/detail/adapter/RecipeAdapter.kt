@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bangkit.nutribiapp.R
 import com.bangkit.nutribiapp.model.RecipeResponse
+import com.bangkit.nutribiapp.presentation.recipe.DetailRecipeActivity
 import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.items_detail_resep.view.img_resep
 import kotlinx.android.synthetic.main.items_detail_resep.view.tv_content
@@ -40,6 +41,9 @@ class RecipeAdapter : RecyclerView.Adapter<RecipeAdapter.ListViewHolder>() {
                 Glide.with(this).load(data.img).into(img_resep)
                 tv_title.text = data.name
                 tv_content.text = data.gram
+                setOnClickListener{
+                    DetailRecipeActivity.start(context)
+                }
             }
         }
     }
