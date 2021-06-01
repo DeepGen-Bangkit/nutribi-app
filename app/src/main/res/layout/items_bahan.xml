@@ -12,6 +12,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         tools:text="Beras merah" />
 
     <com.google.android.material.textfield.TextInputLayout
@@ -25,7 +26,7 @@
         app:layout_constraintTop_toTopOf="@+id/tv_content">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/edtEmail"
+            android:id="@+id/edtGramCount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
@@ -48,7 +49,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="g" />
+        android:text="g" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

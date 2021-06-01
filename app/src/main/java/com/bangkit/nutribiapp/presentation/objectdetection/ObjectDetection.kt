@@ -36,6 +36,7 @@ import androidx.exifinterface.media.ExifInterface
 import androidx.lifecycle.lifecycleScope
 import com.bangkit.nutribiapp.R
 import com.bangkit.nutribiapp.presentation.scanner.ResultScannerActivity
+import com.bangkit.nutribiapp.utils.DataObject.img
 import kotlinx.android.synthetic.main.activity_object_detect.btnNextDetection
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -52,6 +53,9 @@ import kotlin.jvm.Throws
 
 class ObjectDetection : AppCompatActivity(), View.OnClickListener {
 
+    private var ingredients: String = ""
+    private lateinit var imgWithResult: Bitmap
+
     companion object {
 
         const val TAG = "TFLite - ODT"
@@ -63,8 +67,6 @@ class ObjectDetection : AppCompatActivity(), View.OnClickListener {
             context.startActivity(intent)
         }
     }
-
-
 
     private lateinit var captureImageFab: Button
     private lateinit var inputImageView: ImageView
@@ -124,7 +126,7 @@ class ObjectDetection : AppCompatActivity(), View.OnClickListener {
                 setViewAndDetect(getSampleImage(R.drawable.img_meal_three))
             }
             R.id.btnNextDetection -> {
-                ResultScannerActivity.start(this)
+                ResultScannerActivity.start(this, ingredients)
             }
         }
     }
@@ -134,7 +136,7 @@ class ObjectDetection : AppCompatActivity(), View.OnClickListener {
      *      TFLite Object Detection function
      */
     private fun runObjectDetection(bitmap: Bitmap) {
-        //TODO: Add object detection code here
+
         val image = TensorImage.fromBitmap(bitmap)
         val options = ObjectDetector.ObjectDetectorOptions.builder()
             .setMaxResults(5)
@@ -146,7 +148,6 @@ class ObjectDetection : AppCompatActivity(), View.OnClickListener {
             options
         )
         val results = detector.detect(image)
-        debugPrint(results)
         val resultToDisplay = results.map {
             // Get the top-1 category and craft the display text
             val category = it.categories.first()
@@ -156,13 +157,19 @@ class ObjectDetection : AppCompatActivity(), View.OnClickListener {
             DetectionResult(it.boundingBox, text)
         }
         // Draw the detection result on the bitmap and show it.
-        val imgWithResult = drawDetectionResult(bitmap, resultToDisplay)
+        imgWithResult = drawDetectionResult(bitmap, resultToDisplay)
         runOnUiThread {
             inputImageView.setImageBitmap(imgWithResult)
         }
+
+        img = imgWithResult
+
+        debugPrint(results)
     }
 
     private fun debugPrint(results: List<Detection>) {
+        val mutableSetResults = mutableSetOf<String>()
+
         for ((i, obj) in results.withIndex()) {
             val box = obj.boundingBox
 
@@ -173,7 +180,13 @@ class ObjectDetection : AppCompatActivity(), View.OnClickListener {
                 Log.d(TAG, "    Label $j: ${category.label}")
                 val confidence: Int = category.score.times(100).toInt()
                 Log.d(TAG, "    Confidence: ${confidence}%")
+
+                mutableSetResults.add(category.label)
             }
+        }
+
+        mutableSetResults.forEach {
+            ingredients += it
         }
     }
 
@@ -197,6 +210,7 @@ class ObjectDetection : AppCompatActivity(), View.OnClickListener {
      *      Decodes and crops the captured image from camera.
      */
     private fun getCapturedImage(): Bitmap {
+
         // Get the dimensions of the View
         val targetW: Int = inputImageView.width
         val targetH: Int = inputImageView.height

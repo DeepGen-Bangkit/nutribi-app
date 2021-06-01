@@ -27,18 +27,18 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <androidx.appcompat.widget.AppCompatButton
-                style="@style/TextView.Semibold.Purple"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@android:color/transparent"
-                android:drawableEnd="@drawable/ic_edit_purple"
-                android:minWidth="@dimen/dimen_0dp"
-                android:minHeight="@dimen/dimen_0dp"
-                android:text="Edit"
-                android:textAllCaps="false"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+<!--            <androidx.appcompat.widget.AppCompatButton-->
+<!--                style="@style/TextView.Semibold.Purple"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:background="@android:color/transparent"-->
+<!--                android:drawableEnd="@drawable/ic_edit_purple"-->
+<!--                android:minWidth="@dimen/dimen_0dp"-->
+<!--                android:minHeight="@dimen/dimen_0dp"-->
+<!--                android:text="Edit"-->
+<!--                android:textAllCaps="false"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent" />-->
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rv_bahan"
