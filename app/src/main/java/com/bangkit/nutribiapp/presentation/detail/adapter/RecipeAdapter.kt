@@ -5,7 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bangkit.nutribiapp.R
-import com.bangkit.nutribiapp.model.RecipeResponse
+import com.bangkit.nutribiapp.model.SearchRecipeItemResponse
 import com.bangkit.nutribiapp.presentation.recipe.DetailRecipeActivity
 import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.items_detail_resep.view.img_resep
@@ -15,9 +15,9 @@ import java.util.ArrayList
 
 class RecipeAdapter : RecyclerView.Adapter<RecipeAdapter.ListViewHolder>() {
 
-    private var listData = ArrayList<RecipeResponse>()
+    private var listData = ArrayList<SearchRecipeItemResponse>()
 
-    fun setData(newListData: List<RecipeResponse>?) {
+    fun setData(newListData: List<SearchRecipeItemResponse>?) {
         if (newListData == null) return
         listData.clear()
         listData.addAll(newListData)
@@ -36,11 +36,11 @@ class RecipeAdapter : RecyclerView.Adapter<RecipeAdapter.ListViewHolder>() {
 
     inner class ListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-        fun bind(data: RecipeResponse) {
+        fun bind(data: SearchRecipeItemResponse) {
             with(itemView) {
-                Glide.with(this).load(data.img).into(img_resep)
+//                Glide.with(this).load(data.img).into(img_resep)
                 tv_title.text = data.name
-                tv_content.text = data.gram
+//                tv_content.text = data.gram
                 setOnClickListener{
                     DetailRecipeActivity.start(context)
                 }

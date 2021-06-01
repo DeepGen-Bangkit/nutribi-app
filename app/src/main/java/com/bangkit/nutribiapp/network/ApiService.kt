@@ -4,9 +4,13 @@ import com.bangkit.nutribiapp.model.LoginRequest
 import com.bangkit.nutribiapp.model.LoginResponse
 import com.bangkit.nutribiapp.model.RegisterRequest
 import com.bangkit.nutribiapp.model.RegisterResponse
+import com.bangkit.nutribiapp.model.SearchIngredientItemResponse
+import com.bangkit.nutribiapp.model.SearchRecipeItemResponse
 import retrofit2.Response
 import retrofit2.http.Body
+import retrofit2.http.GET
 import retrofit2.http.POST
+import retrofit2.http.Query
 
 interface ApiService {
 
@@ -19,4 +23,14 @@ interface ApiService {
     suspend fun postRegister(
         @Body registerRequest: RegisterRequest
     ): Response<RegisterResponse>
+
+    @GET("food/bahan/")
+    suspend fun getSearchIngredient(
+        @Query("name") name: String
+    ): Response<List<SearchIngredientItemResponse>>
+
+    @GET("food/recipe/")
+    suspend fun getSearchRecipe(
+        @Query("ingredients") ingredients: String
+    ): Response<List<SearchRecipeItemResponse>>
 }
