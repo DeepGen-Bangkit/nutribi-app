@@ -5,7 +5,8 @@ data class SearchIngredientItemResponse(
     val name: String? = null,
     val kcal: Int? = null,
     val nutrition: List<Nutrition>? = null,
-    var gram: Int? = 0
+    var gram: Int? = 0,
+    val image: String? = null
 )
 
 data class Nutrition(

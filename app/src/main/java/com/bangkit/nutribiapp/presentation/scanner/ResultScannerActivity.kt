@@ -9,10 +9,13 @@ import android.util.Log
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.bangkit.nutribiapp.R
+import com.bangkit.nutribiapp.presentation.detail.SelectedFoodActivity
 import com.bangkit.nutribiapp.presentation.ingredient.IngredientViewModel
 import com.bangkit.nutribiapp.presentation.nutrition.adapter.DetailNutritionAdapter
 import com.bangkit.nutribiapp.utils.Const
 import com.bangkit.nutribiapp.utils.DataObject.img
+import com.bangkit.nutribiapp.utils.DataObject.searchRecipeResponse
+import kotlinx.android.synthetic.main.activity_result_scanner.btnNextSelectedIngredientDetection
 import kotlinx.android.synthetic.main.activity_result_scanner.img_scanner
 import kotlinx.android.synthetic.main.activity_result_scanner.rv_ingredients
 import kotlinx.android.synthetic.main.activity_selected_food.rv_bahan
@@ -47,6 +50,14 @@ class ResultScannerActivity : AppCompatActivity() {
         initRecyclerView()
         initObserver()
         initUI(img)
+        initAction()
+    }
+
+    private fun initAction() {
+        btnNextSelectedIngredientDetection.setOnClickListener{
+            searchRecipeResponse = detailNutritionAdapter.listData.toMutableSet()
+            SelectedFoodActivity.start(this)
+        }
     }
 
     private fun initUI(img: Bitmap) {
