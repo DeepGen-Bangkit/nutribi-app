@@ -44,5 +44,7 @@
     <string name="label_proteion">Protein</string>
     <string name="hello_blank_fragment">Hello Blank Fragment</string>
     <string name="label_lemak">Lemak</string>
+    <string name="label_desc">Lihat Kandungan Bahan Makanan Mums untuk Sikecil disini ya</string>
+    <string name="label_scan">Scan</string>
 
 </resources>
