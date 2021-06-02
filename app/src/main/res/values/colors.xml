@@ -35,6 +35,7 @@
     <color name="colorOrangeFade">#ffbf4f</color>
     <color name="colorOrangeDark">#fd9d45</color>
     <color name="colorPurple">#9483FF</color>
+    <color name="colorPurpleFade">#F0D1FF</color>
     <color name="colorGreenBrocolli">#3dcd47</color>
     <color name="colorBlackFade">#202020</color>
     <color name="colorBlackDark">#151515</color>
