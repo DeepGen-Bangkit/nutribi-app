@@ -185,9 +185,30 @@ class ObjectDetection : AppCompatActivity(), View.OnClickListener {
             }
         }
 
-        mutableSetResults.forEach {
-            ingredients += it
+        var name: String = ""
+
+        mutableSetResults.forEachIndexed { index, s ->
+
+            name += when (s) {
+                "Tomato" -> "Tomat merah segar"
+                "Shrimp" -> "Udang segar"
+                "Carrot" -> "Wortel segar"
+                "Egg" -> "Telur ayam"
+                "Potato" -> "Kentang segar"
+                "Banana" -> "Pisang ambon segar"
+                "Pasta" -> "Spaghetti"
+                "Cabbage" -> "Daun kubis segar"
+                else -> {
+                    ""
+                }
+            }
+
+            if(index != mutableSetResults.size - 1){
+                name += ","
+            }
         }
+
+        ingredients = name
     }
 
     /**
