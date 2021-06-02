@@ -20,7 +20,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".presentation.home.HomeActivity"></activity>
+        <activity android:name=".presentation.home.HomeActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".presentation.ingredient.detail.DetailIngredientActivity" />
         <activity android:name=".presentation.recipe.DetailRecipeActivity" />
         <activity android:name=".presentation.nutrition.DetailNutritionActivity" />
@@ -33,11 +39,7 @@
         <activity android:name=".presentation.detail.SelectedFoodActivity" />
         <activity android:name=".presentation.auth.LoginActivity"></activity>
         <activity android:name=".presentation.objectdetection.ObjectDetection">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".presentation.auth.RegisterActivity" />
 
