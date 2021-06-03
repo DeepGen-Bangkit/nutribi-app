@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,82 +7,89 @@
     android:background="@color/colorOrangeFade"
     tools:context=".presentation.home.HomeActivity">
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/label_hello"
-        style="@style/TextView.Bold"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:gravity="center"
-        android:text="Hello Mums"
-        android:textColor="@color/white"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/label_desc"
-        style="@style/TextView.Semibold"
-        android:layout_width="@dimen/dimen_0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
-        android:text="@string/label_desc"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/label_hello" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_search"
-        style="@style/TextView.OrangeDark"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:background="@drawable/bg_search_button"
-        android:text="Cari bahan makanan atau resep"
-        android:textAllCaps="false"
-        app:layout_constraintEnd_toStartOf="@+id/btn_scan"
-        app:layout_constraintStart_toStartOf="@+id/label_desc"
-        app:layout_constraintTop_toBottomOf="@+id/label_desc" />
-
-
-    <androidx.appcompat.widget.AppCompatImageButton
-        android:id="@+id/btn_scan"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:background="@drawable/bg_object_detection"
-        android:src="@drawable/ic_camera_purple_24"
-        app:layout_constraintBottom_toBottomOf="@+id/btn_search"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/btn_search" />
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/appCompatTextView7"
-        style="@style/TextView.Semibold"
-        android:layout_width="@dimen/dimen_0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="Resep yang seimbang untuk Mums dan si kecil"
-        android:textColor="@color/white"
-        app:layout_constraintStart_toStartOf="@+id/btn_search"
-        app:layout_constraintTop_toBottomOf="@+id/btn_search" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_resep"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appCompatTextView7"
-        tools:listitem="@layout/items_detail_resep" />
+        android:layout_height="match_parent">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/label_hello"
+            style="@style/TextView.Bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:gravity="center"
+            android:text="Hello Mums"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/label_desc"
+            style="@style/TextView.Semibold"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/label_desc"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/label_hello" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_search"
+            style="@style/TextView.OrangeDark"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/bg_search_button"
+            android:text="Cari bahan makanan atau resep"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toStartOf="@+id/btn_scan"
+            app:layout_constraintStart_toStartOf="@+id/label_desc"
+            app:layout_constraintTop_toBottomOf="@+id/label_desc" />
+
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/btn_scan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/bg_object_detection"
+            android:src="@drawable/ic_camera_purple_24"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_search"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/btn_search" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/appCompatTextView7"
+            style="@style/TextView.Semibold"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Resep yang seimbang untuk Mums dan si kecil"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="@+id/btn_search"
+            app:layout_constraintTop_toBottomOf="@+id/btn_search" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_resep"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appCompatTextView7"
+            tools:listitem="@layout/items_detail_resep" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.core.widget.NestedScrollView>

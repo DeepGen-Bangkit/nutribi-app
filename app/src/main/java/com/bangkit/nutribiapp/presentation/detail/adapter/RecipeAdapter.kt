@@ -1,6 +1,5 @@
 package com.bangkit.nutribiapp.presentation.detail.adapter
 
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -8,13 +7,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bangkit.nutribiapp.R
 import com.bangkit.nutribiapp.model.SearchRecipeItemResponse
 import com.bangkit.nutribiapp.presentation.recipe.DetailRecipeActivity
-import com.bangkit.nutribiapp.utils.GlideApp
 import com.bumptech.glide.Glide
-import kotlinx.android.synthetic.main.items_detail_ingredient.view.img_ingredient
-import kotlinx.android.synthetic.main.items_detail_resep.view.img_resep
-import kotlinx.android.synthetic.main.items_detail_resep.view.tv_content
-import kotlinx.android.synthetic.main.items_detail_resep.view.tv_title
-import java.util.ArrayList
+import kotlinx.android.synthetic.main.items_detail_resep.view.*
+import java.util.*
 
 class RecipeAdapter : RecyclerView.Adapter<RecipeAdapter.ListViewHolder>() {
 
@@ -28,7 +23,9 @@ class RecipeAdapter : RecyclerView.Adapter<RecipeAdapter.ListViewHolder>() {
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
-        ListViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.items_detail_resep, parent, false))
+        ListViewHolder(
+            LayoutInflater.from(parent.context).inflate(R.layout.items_detail_resep, parent, false)
+        )
 
     override fun getItemCount() = listData.size
 
@@ -43,14 +40,14 @@ class RecipeAdapter : RecyclerView.Adapter<RecipeAdapter.ListViewHolder>() {
             with(itemView) {
                 tv_title.text = data.name
                 Glide.with(context).load(data.image).into(img_resep)
+//
+//                if("/https%3A/" == data.image?.take(10)){
+//                    Glide.with(context).load("https://"+data.image.takeLast(data.image.length - 10)).into(img_resep)
+//                } else {
+//                    Glide.with(this).load(data.image).into(img_ingredient)
+//                }
 
-                if("/https%3A/" == data.image?.take(10)){
-                    Glide.with(context).load("https://"+data.image.takeLast(data.image.length - 10)).into(img_resep)
-                } else {
-                    Glide.with(this).load(data.image).into(img_ingredient)
-                }
-
-                setOnClickListener{
+                setOnClickListener {
                     DetailRecipeActivity.start(context)
                 }
             }
