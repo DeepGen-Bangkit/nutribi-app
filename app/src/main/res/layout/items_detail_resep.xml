@@ -16,11 +16,8 @@
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/img_resep"
-            android:layout_width="@dimen/dimen_80dp"
-            android:layout_height="@dimen/dimen_80dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="16dp"
+            android:layout_width="@dimen/dimen_120dp"
+            android:layout_height="@dimen/dimen_120dp"
             android:background="@color/colorGrey"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -29,51 +26,54 @@
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tv_title"
             style="@style/TextView.Bold.OrangeDark"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/img_resep"
-            app:layout_constraintTop_toTopOf="@+id/img_resep"
+            app:layout_constraintTop_toTopOf="parent"
             tools:text="Brocoli Tabouleh" />
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/tv_content"
-            style="@style/TextView.OrangeDark"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            app:layout_constraintStart_toStartOf="@+id/tv_title"
-            app:layout_constraintTop_toBottomOf="@+id/tv_title"
-            tools:text="100gram" />
+        <!--        <androidx.appcompat.widget.AppCompatTextView-->
+        <!--            android:id="@+id/tv_content"-->
+        <!--            style="@style/TextView.OrangeDark"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginTop="4dp"-->
+        <!--            app:layout_constraintStart_toStartOf="@+id/tv_title"-->
+        <!--            app:layout_constraintTop_toBottomOf="@+id/tv_title"-->
+        <!--            tools:text="100gram" />-->
 
-<!--        <ImageView-->
-<!--            android:id="@+id/img_star"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:src="@drawable/ic_star"-->
-<!--            app:layout_constraintBottom_toBottomOf="@+id/img_resep"-->
-<!--            app:layout_constraintStart_toStartOf="@+id/tv_content" />-->
+        <!--        <ImageView-->
+        <!--            android:id="@+id/img_star"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:src="@drawable/ic_star"-->
+        <!--            app:layout_constraintBottom_toBottomOf="@+id/img_resep"-->
+        <!--            app:layout_constraintStart_toStartOf="@+id/tv_content" />-->
 
-<!--        <TextView-->
-<!--            android:id="@+id/tv_star_point"-->
-<!--            style="@style/TextView.Bold"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginStart="8dp"-->
-<!--            app:layout_constraintBottom_toBottomOf="@+id/img_star"-->
-<!--            app:layout_constraintStart_toEndOf="@+id/img_star"-->
-<!--            app:layout_constraintTop_toTopOf="@+id/img_star"-->
-<!--            tools:text="4.2" />-->
+        <!--        <TextView-->
+        <!--            android:id="@+id/tv_star_point"-->
+        <!--            style="@style/TextView.Bold"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginStart="8dp"-->
+        <!--            app:layout_constraintBottom_toBottomOf="@+id/img_star"-->
+        <!--            app:layout_constraintStart_toEndOf="@+id/img_star"-->
+        <!--            app:layout_constraintTop_toTopOf="@+id/img_star"-->
+        <!--            tools:text="4.2" />-->
 
-<!--        <TextView-->
-<!--            android:id="@+id/tv_rating"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginStart="16dp"-->
-<!--            app:layout_constraintBottom_toBottomOf="@+id/tv_star_point"-->
-<!--            app:layout_constraintStart_toEndOf="@+id/tv_star_point"-->
-<!--            app:layout_constraintTop_toTopOf="@+id/tv_star_point"-->
-<!--            tools:text="100+ rating" />-->
+        <!--        <TextView-->
+        <!--            android:id="@+id/tv_rating"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginStart="16dp"-->
+        <!--            app:layout_constraintBottom_toBottomOf="@+id/tv_star_point"-->
+        <!--            app:layout_constraintStart_toEndOf="@+id/tv_star_point"-->
+        <!--            app:layout_constraintTop_toTopOf="@+id/tv_star_point"-->
+        <!--            tools:text="100+ rating" />-->
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </com.google.android.material.card.MaterialCardView>
