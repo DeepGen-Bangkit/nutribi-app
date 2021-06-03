@@ -1,5 +1,9 @@
 package com.bangkit.nutribiapp.model
 
+import android.os.Parcelable
+import kotlinx.android.parcel.Parcelize
+
+@Parcelize
 data class SearchIngredientItemResponse(
     val id: Int? = null,
     val name: String? = null,
@@ -7,8 +11,9 @@ data class SearchIngredientItemResponse(
     val nutrition: List<Nutrition>? = null,
     var gram: Int? = 0,
     val image: String? = null
-)
+) : Parcelable
 
+@Parcelize
 data class Nutrition(
     val food: String? = null,
     val carbo: String? = null,
@@ -32,4 +37,4 @@ data class Nutrition(
     val riboflavin: String? = null,
     val niasin: String? = null,
     val vit_c: String? = null
-)
+) : Parcelable

@@ -46,5 +46,21 @@
     <string name="label_lemak">Lemak</string>
     <string name="label_desc">Lihat Kandungan Bahan Makanan Mums untuk Sikecil disini ya</string>
     <string name="label_scan">Scan</string>
+    <string name="label_serat">Serat</string>
+    <string name="label_kalsium">Kalsium</string>
+    <string name="label_fosfor">Fosfor</string>
+    <string name="label_natrium">Natrium</string>
+    <string name="label_zink">Zink</string>
+    <string name="label_kalium">Kalium</string>
+    <string name="label_tembaga">Tembaga</string>
+    <string name="label_seng">Seng</string>
+    <string name="label_retinol">Retinol</string>
+    <string name="label_betakaroten">Betakaroten</string>
+    <string name="label_karoten">Karoten</string>
+    <string name="label_thiamin">Thiamin</string>
+    <string name="label_riboflavin">Riboflavin</string>
+    <string name="label_niasin">Niasin</string>
+    <string name="label_vitamin_c">Vitamin C</string>
+    <string name="label_abu">Abu</string>
 
 </resources>

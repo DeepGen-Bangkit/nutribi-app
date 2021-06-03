@@ -33,7 +33,7 @@
             tools:text="Telur" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/tv_nutrition"
+            android:id="@+id/tv_gram"
             style="@style/TextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -172,18 +172,347 @@
             app:layout_constraintStart_toStartOf="@+id/progress_fat"
             app:layout_constraintTop_toBottomOf="@+id/progress_fat" />
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_nutrition"
-            android:layout_width="match_parent"
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/label_air"
+            style="@style/TextView"
+            android:layout_width="@dimen/dimen_0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="32dp"
+            android:text="Air"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/label_protein"
-            tools:listitem="@layout/items_nutrition" />
+            app:layout_constraintTop_toBottomOf="@+id/label_protein" />
 
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_air"
+            style="@style/TextView"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="16dp"
+            android:text="Air"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/label_fat" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/label_serat"
+            style="@style/TextView"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/label_serat"
+            app:layout_constraintStart_toStartOf="@+id/label_air"
+            app:layout_constraintTop_toBottomOf="@+id/label_air" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_serat"
+            style="@style/TextView"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/label_serat"
+            app:layout_constraintEnd_toEndOf="@+id/tv_air"
+            app:layout_constraintTop_toBottomOf="@+id/tv_air" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/label_abu"
+            style="@style/TextView"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/label_abu"
+            app:layout_constraintStart_toStartOf="@+id/label_serat"
+            app:layout_constraintTop_toBottomOf="@+id/label_serat" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_abu"
+            style="@style/TextView"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/label_abu"
+            app:layout_constraintEnd_toEndOf="@+id/tv_serat"
+            app:layout_constraintTop_toBottomOf="@+id/tv_serat" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/label_kalsium"
+            style="@style/TextView"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/label_kalsium"
+            app:layout_constraintStart_toStartOf="@+id/label_abu"
+            app:layout_constraintTop_toBottomOf="@+id/label_abu" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_kalsium"
+            style="@style/TextView"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/label_kalsium"
+            app:layout_constraintEnd_toEndOf="@+id/tv_abu"
+            app:layout_constraintTop_toBottomOf="@+id/tv_abu" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/label_fosfor"
+            style="@style/TextView"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/label_fosfor"
+            app:layout_constraintStart_toStartOf="@+id/label_kalsium"
+            app:layout_constraintTop_toBottomOf="@+id/label_kalsium" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_fosfor"
+            style="@style/TextView"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            app:layout_constraintEnd_toEndOf="@+id/tv_kalsium"
+            app:layout_constraintTop_toBottomOf="@+id/tv_kalsium"
+            tools:text="@string/label_fosfor" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/label_natrium"
+            style="@style/TextView"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/label_natrium"
+            app:layout_constraintStart_toStartOf="@+id/label_fosfor"
+            app:layout_constraintTop_toBottomOf="@+id/label_fosfor" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_natrium"
+            style="@style/TextView"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            app:layout_constraintEnd_toEndOf="@+id/tv_fosfor"
+            app:layout_constraintTop_toBottomOf="@+id/tv_fosfor"
+            tools:text="@string/label_natrium" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/label_zat_besi"
+            style="@style/TextView"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/label_zink"
+            app:layout_constraintStart_toStartOf="@+id/label_natrium"
+            app:layout_constraintTop_toBottomOf="@+id/label_natrium" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_zat_besi"
+            style="@style/TextView"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            app:layout_constraintEnd_toEndOf="@+id/tv_natrium"
+            app:layout_constraintTop_toBottomOf="@+id/tv_natrium"
+            tools:text="@string/label_zink" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/label_kalium"
+            style="@style/TextView"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/label_kalium"
+            app:layout_constraintStart_toStartOf="@+id/label_zat_besi"
+            app:layout_constraintTop_toBottomOf="@+id/label_zat_besi" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_kalium"
+            style="@style/TextView"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            app:layout_constraintEnd_toEndOf="@+id/tv_zat_besi"
+            app:layout_constraintTop_toBottomOf="@+id/tv_zat_besi"
+            tools:text="@string/label_kalium" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/label_tembaga"
+            style="@style/TextView"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/label_tembaga"
+            app:layout_constraintStart_toStartOf="@+id/label_kalium"
+            app:layout_constraintTop_toBottomOf="@+id/label_kalium" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_tembaga"
+            style="@style/TextView"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            app:layout_constraintEnd_toEndOf="@+id/tv_kalium"
+            app:layout_constraintTop_toBottomOf="@+id/tv_kalium"
+            tools:text="@string/label_tembaga" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/label_seng"
+            style="@style/TextView"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/label_seng"
+            app:layout_constraintStart_toStartOf="@+id/label_tembaga"
+            app:layout_constraintTop_toBottomOf="@+id/label_tembaga" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_seng"
+            style="@style/TextView"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            app:layout_constraintEnd_toEndOf="@+id/tv_tembaga"
+            app:layout_constraintTop_toBottomOf="@+id/tv_tembaga"
+            tools:text="@string/label_seng" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/label_retinol"
+            style="@style/TextView"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/label_retinol"
+            app:layout_constraintStart_toStartOf="@+id/label_seng"
+            app:layout_constraintTop_toBottomOf="@+id/label_seng" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_retinol"
+            style="@style/TextView"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            app:layout_constraintEnd_toEndOf="@+id/tv_seng"
+            app:layout_constraintTop_toBottomOf="@+id/tv_seng"
+            tools:text="@string/label_retinol" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/label_betakaroten"
+            style="@style/TextView"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/label_betakaroten"
+            app:layout_constraintStart_toStartOf="@+id/label_retinol"
+            app:layout_constraintTop_toBottomOf="@+id/label_retinol" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_betakaroten"
+            style="@style/TextView"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            app:layout_constraintEnd_toEndOf="@+id/tv_retinol"
+            app:layout_constraintTop_toBottomOf="@+id/tv_retinol"
+            tools:text="@string/label_betakaroten" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/label_karoten"
+            style="@style/TextView"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/label_karoten"
+            app:layout_constraintStart_toStartOf="@+id/label_betakaroten"
+            app:layout_constraintTop_toBottomOf="@+id/label_betakaroten" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_karoten"
+            style="@style/TextView"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            app:layout_constraintEnd_toEndOf="@+id/tv_betakaroten"
+            app:layout_constraintTop_toBottomOf="@+id/tv_betakaroten"
+            tools:text="@string/label_karoten" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/label_thiamin"
+            style="@style/TextView"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/label_thiamin"
+            app:layout_constraintStart_toStartOf="@+id/label_betakaroten"
+            app:layout_constraintTop_toBottomOf="@+id/label_karoten" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_thiamin"
+            style="@style/TextView"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            app:layout_constraintEnd_toEndOf="@+id/tv_karoten"
+            app:layout_constraintTop_toBottomOf="@+id/tv_karoten"
+            tools:text="@string/label_thiamin" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/riboflavin"
+            style="@style/TextView"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/label_riboflavin"
+            app:layout_constraintStart_toStartOf="@+id/label_thiamin"
+            app:layout_constraintTop_toBottomOf="@+id/label_thiamin" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_riboflavin"
+            style="@style/TextView"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            app:layout_constraintEnd_toEndOf="@+id/tv_thiamin"
+            app:layout_constraintTop_toBottomOf="@+id/tv_thiamin"
+            tools:text="@string/label_riboflavin" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/label_niasin"
+            style="@style/TextView"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/label_niasin"
+            app:layout_constraintStart_toStartOf="@+id/riboflavin"
+            app:layout_constraintTop_toBottomOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_niasin"
+            style="@style/TextView"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            app:layout_constraintEnd_toEndOf="@+id/tv_riboflavin"
+            app:layout_constraintTop_toBottomOf="@+id/tv_riboflavin"
+            tools:text="@string/label_niasin" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/label_vitamin_c"
+            style="@style/TextView"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/label_vitamin_c"
+            app:layout_constraintStart_toStartOf="@+id/label_niasin"
+            app:layout_constraintTop_toBottomOf="@+id/label_niasin" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_vitamin_c"
+            style="@style/TextView"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            app:layout_constraintEnd_toEndOf="@+id/tv_niasin"
+            app:layout_constraintTop_toBottomOf="@+id/label_niasin"
+            tools:text="@string/label_vitamin_c" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 

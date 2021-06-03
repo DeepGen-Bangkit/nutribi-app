@@ -4,13 +4,13 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bangkit.nutribiapp.databinding.ItemsNutritionBinding
-import com.bangkit.nutribiapp.model.IngredientResponse
+import com.bangkit.nutribiapp.model.Nutrition
 
 class DetailIngredientAdapter : RecyclerView.Adapter<DetailIngredientAdapter.ViewHolder>() {
 
-    private val listNutritions = ArrayList<IngredientResponse>()
+    private val listNutritions = ArrayList<Nutrition>()
 
-    fun setNutritions(nutritions: List<IngredientResponse>) {
+    fun setNutritions(nutritions: List<Nutrition>) {
         listNutritions.clear()
         listNutritions.addAll(nutritions)
     }
@@ -34,10 +34,8 @@ class DetailIngredientAdapter : RecyclerView.Adapter<DetailIngredientAdapter.Vie
     class ViewHolder(private val binding: ItemsNutritionBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
-        fun bind(nutrition: IngredientResponse) {
+        fun bind(nutrition: Nutrition) {
             with(binding) {
-                tvName.text = nutrition.name
-                tvScoreNutrition.text = nutrition.kcalPerGram
             }
         }
 
