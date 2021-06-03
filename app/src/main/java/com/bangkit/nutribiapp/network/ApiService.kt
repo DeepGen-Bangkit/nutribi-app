@@ -2,6 +2,8 @@ package com.bangkit.nutribiapp.network
 
 import com.bangkit.nutribiapp.model.LoginRequest
 import com.bangkit.nutribiapp.model.LoginResponse
+import com.bangkit.nutribiapp.model.NutritionDetailRequest
+import com.bangkit.nutribiapp.model.NutritionDetailResponse
 import com.bangkit.nutribiapp.model.RegisterRequest
 import com.bangkit.nutribiapp.model.RegisterResponse
 import com.bangkit.nutribiapp.model.SearchIngredientItemResponse
@@ -35,4 +37,10 @@ interface ApiService {
         @Query("ingredients") ingredients: String,
         @Query("count") count: Boolean
     ): Response<List<SearchRecipeItemResponse>>
+
+    @POST("food/nutrition-detail/")
+    suspend fun postNutritionDetail(
+        @Body nutritionDetailRequest: List<NutritionDetailRequest>
+    ): Response<NutritionDetailResponse>
+
 }

@@ -40,11 +40,13 @@ class ResultScannerActivity : AppCompatActivity() {
         }
     }
 
+    private var ingredients : String = ""
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_result_scanner)
 
-        val ingredients = intent.getStringExtra(Const.EXTRA_LIST_DETECTION)
+        ingredients = intent.getStringExtra(Const.EXTRA_LIST_DETECTION).toString()
         Log.d("TAG", "onCreate: " + ingredients)
 
         initRecyclerView()
@@ -65,7 +67,7 @@ class ResultScannerActivity : AppCompatActivity() {
     }
 
     private fun initObserver() {
-        ingredientViewModel.getSearchIngredient("")
+        ingredientViewModel.getSearchIngredient(ingredients)
         ingredientViewModel.searchIngredientItemResponse.observe(this){
             detailNutritionAdapter.setData(it)
         }

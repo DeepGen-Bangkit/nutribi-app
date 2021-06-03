@@ -37,6 +37,7 @@ import androidx.lifecycle.lifecycleScope
 import com.bangkit.nutribiapp.R
 import com.bangkit.nutribiapp.presentation.scanner.ResultScannerActivity
 import com.bangkit.nutribiapp.utils.DataObject.img
+import com.bangkit.nutribiapp.utils.DataObject.searchRecipeResponse
 import kotlinx.android.synthetic.main.activity_object_detect.btnNextDetection
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -216,6 +217,8 @@ class ObjectDetection : AppCompatActivity(), View.OnClickListener {
      *      Set image to view and call object detection
      */
     private fun setViewAndDetect(bitmap: Bitmap) {
+        searchRecipeResponse.clear()
+
         // Display capture image
         inputImageView.setImageBitmap(bitmap)
         tvPlaceholder.visibility = View.INVISIBLE
@@ -390,6 +393,12 @@ class ObjectDetection : AppCompatActivity(), View.OnClickListener {
             )
         }
         return outputBitmap
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+
+        searchRecipeResponse.clear()
     }
 }
 

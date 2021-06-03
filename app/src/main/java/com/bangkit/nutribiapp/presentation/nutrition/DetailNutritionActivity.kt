@@ -4,12 +4,28 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.bangkit.nutribiapp.databinding.ActivityDetailNutritionBinding
+import com.bangkit.nutribiapp.model.NutritionDetailRequest
 import com.bangkit.nutribiapp.presentation.detail.SelectedFoodActivity
+import com.bangkit.nutribiapp.presentation.ingredient.IngredientViewModel
+import com.bangkit.nutribiapp.presentation.ingredient.adapter.IngredientAdapter
+import com.bangkit.nutribiapp.presentation.nutrition.adapter.DetailNutritionAdapter
+import com.bangkit.nutribiapp.presentation.nutrition.adapter.DetailNutritionItemAdapter
+import com.bangkit.nutribiapp.utils.DataObject.searchRecipeResponse
+import kotlinx.android.synthetic.main.activity_result_scanner.rv_ingredients
+import org.koin.android.viewmodel.ext.android.viewModel
 
 class DetailNutritionActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityDetailNutritionBinding
+
+    private val ingredientViewModel: IngredientViewModel by viewModel()
+
+    private val detailNutritionAdapter: DetailNutritionItemAdapter by lazy {
+        DetailNutritionItemAdapter()
+    }
 
     companion object {
 
@@ -24,6 +40,32 @@ class DetailNutritionActivity : AppCompatActivity() {
 
         binding = ActivityDetailNutritionBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        initRecyclerView()
+
+        val nutritionDetailRequest = mutableListOf<NutritionDetailRequest>()
+
+        searchRecipeResponse.forEach{
+            nutritionDetailRequest.add(
+                NutritionDetailRequest(
+                    name = it.name,
+                    count = it.gram
+                )
+            )
+        }
+
+        ingredientViewModel.postNutritionDetail(nutritionDetailRequest)
+        ingredientViewModel.nutritionDetailResponse.observe(this){
+            detailNutritionAdapter.setData(it.food)
+        }
+    }
+
+    private fun initRecyclerView() {
+        rv_ingredients.apply {
+            layoutManager = LinearLayoutManager(this@DetailNutritionActivity)
+            adapter = detailNutritionAdapter
+            setRecycledViewPool(RecyclerView.RecycledViewPool())
+        }
 
     }
 }
