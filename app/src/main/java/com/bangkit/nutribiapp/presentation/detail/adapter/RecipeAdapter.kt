@@ -6,11 +6,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bangkit.nutribiapp.R
+import com.bangkit.nutribiapp.model.FoodRecipe
 import com.bangkit.nutribiapp.model.SearchRecipeItemResponse
 import com.bangkit.nutribiapp.presentation.recipe.DetailRecipeActivity
 import com.bangkit.nutribiapp.utils.GlideApp
 import com.bumptech.glide.Glide
-import kotlinx.android.synthetic.main.items_detail_ingredient.view.img_ingredient
 import kotlinx.android.synthetic.main.items_detail_resep.view.img_resep
 import kotlinx.android.synthetic.main.items_detail_resep.view.tv_content
 import kotlinx.android.synthetic.main.items_detail_resep.view.tv_title
@@ -44,14 +44,16 @@ class RecipeAdapter : RecyclerView.Adapter<RecipeAdapter.ListViewHolder>() {
                 tv_title.text = data.name
                 Glide.with(context).load(data.image).into(img_resep)
 
+                Log.d("TAG", "bind: " + data.image)
+
                 if("/https%3A/" == data.image?.take(10)){
                     Glide.with(context).load("https://"+data.image.takeLast(data.image.length - 10)).into(img_resep)
                 } else {
-                    Glide.with(this).load(data.image).into(img_ingredient)
+                    Glide.with(context).load(data.image).into(img_resep)
                 }
 
                 setOnClickListener{
-                    DetailRecipeActivity.start(context)
+                    DetailRecipeActivity.start(context, data)
                 }
             }
         }

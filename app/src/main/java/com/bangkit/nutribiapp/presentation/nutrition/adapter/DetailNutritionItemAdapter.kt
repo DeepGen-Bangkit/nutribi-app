@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bangkit.nutribiapp.R
 import com.bangkit.nutribiapp.model.Food
+import com.bangkit.nutribiapp.presentation.ingredient.detail.DetailIngredientActivity
 import com.bangkit.nutribiapp.utils.GlideApp
 import kotlinx.android.synthetic.main.items_detail_ingredient.view.img_ingredient
 import kotlinx.android.synthetic.main.items_detail_ingredient.view.tv_fat
@@ -54,6 +55,10 @@ class DetailNutritionItemAdapter : RecyclerView.Adapter<DetailNutritionItemAdapt
                 } else {
                     Log.d("TAG", "bind: false")
                     GlideApp.with(this).load(data.image).into(img_ingredient)
+                }
+
+                setOnClickListener{
+                    DetailIngredientActivity.start(context, data)
                 }
             }
         }

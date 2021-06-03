@@ -8,6 +8,7 @@ object Const {
     const val EXTRA_REGISTER_REQUEST = "extra_register_request"
     const val EXTRA_LIST_DETECTION = "extra_list_detection"
     const val EXTRA_IMG_DETECTION = "extra_img_detection"
+    const val EXTRA_DETAIL_RECIPE = "extra_detail_recipe"
 
     const val TYPE_MOVIE = "type_movie"
     const val TYPE_TVSHOW = "type_tvshow"
