@@ -4,7 +4,11 @@ data class NutritionDetailResponse(
     val lemak_total: String? = null,
     val protein_total: String? = null,
     val carbo_total: String? = null,
-    val food: List<Food>? = null
+    val kcal_total: String? = null,
+    val food: List<Food>? = null,
+    val lemak_presentase: String? = null,
+    val protein_presentase: String? = null,
+    val carbo_presentase: String? = null,
 )
 
 data class Food(

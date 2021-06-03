@@ -11,6 +11,18 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <TextView
+            android:id="@+id/label_nutrition_detail"
+            style="@style/TextView.Bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_16dp"
+            android:text="Detail Nutrisi"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <ProgressBar
             android:id="@+id/progress_cal"
             android:layout_width="150dp"
@@ -20,15 +32,29 @@
             android:indeterminateOnly="false"
             android:progressDrawable="@drawable/progress_karbo"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:progress="50" />
+            app:layout_constraintTop_toBottomOf="@id/label_nutrition_detail"
+            tools:progress="50"
+            android:visibility="invisible"/>
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/appCompatTextView6"
+            android:id="@+id/tvLabelEnergi"
             style="@style/TextView.Bold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="450"
+            android:text="Energi"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@id/tvKcal"
+            app:layout_constraintEnd_toEndOf="@+id/progress_cal"
+            app:layout_constraintStart_toStartOf="@id/tvKcal"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintTop_toTopOf="@+id/progress_cal" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvKcal"
+            style="@style/TextView.Bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="450 kcal"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="@+id/progress_cal"
             app:layout_constraintEnd_toEndOf="@+id/progress_cal"
@@ -57,10 +83,10 @@
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/label_karbo"
             style="@style/TextView"
+            android:text="@string/label_karbohidrat"
             android:textSize="12sp"
             app:layout_constraintStart_toStartOf="@+id/tv_karbo"
-            app:layout_constraintTop_toBottomOf="@+id/tv_karbo"
-            tools:text="@string/label_karbohidrat" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_karbo" />
 
         <ProgressBar
             android:id="@+id/progress_protein"
@@ -83,10 +109,10 @@
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/label_protein"
             style="@style/TextView"
+            android:text="@string/label_proteion"
             android:textSize="12sp"
             app:layout_constraintStart_toStartOf="@+id/tv_protein"
-            app:layout_constraintTop_toBottomOf="@+id/tv_protein"
-            tools:text="@string/label_proteion" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_protein" />
 
         <ProgressBar
             android:id="@+id/progress_fat"
@@ -110,10 +136,10 @@
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/label_fat"
             style="@style/TextView"
+            android:text="@string/label_lemak"
             android:textSize="12sp"
             app:layout_constraintStart_toStartOf="@+id/tv_fat"
-            app:layout_constraintTop_toBottomOf="@+id/tv_fat"
-            tools:text="@string/label_lemak" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_fat" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/label_action"
@@ -131,7 +157,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
