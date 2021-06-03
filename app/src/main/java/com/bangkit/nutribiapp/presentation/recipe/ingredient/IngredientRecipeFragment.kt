@@ -18,4 +18,9 @@ class IngredientRecipeFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_ingredient_recipe, container, false)
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+    }
+
 }

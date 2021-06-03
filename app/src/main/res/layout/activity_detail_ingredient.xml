@@ -188,11 +188,11 @@
             style="@style/TextView"
             android:layout_width="@dimen/dimen_0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
             android:layout_marginEnd="16dp"
             android:text="Air"
+            app:layout_constraintBottom_toBottomOf="@+id/label_air"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/label_fat" />
+            app:layout_constraintTop_toTopOf="@+id/label_air" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/label_serat"
@@ -209,10 +209,10 @@
             style="@style/TextView"
             android:layout_width="@dimen/dimen_0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
             android:text="@string/label_serat"
+            app:layout_constraintBottom_toBottomOf="@+id/label_serat"
             app:layout_constraintEnd_toEndOf="@+id/tv_air"
-            app:layout_constraintTop_toBottomOf="@+id/tv_air" />
+            app:layout_constraintTop_toTopOf="@+id/label_serat" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/label_abu"
@@ -229,10 +229,10 @@
             style="@style/TextView"
             android:layout_width="@dimen/dimen_0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
             android:text="@string/label_abu"
+            app:layout_constraintBottom_toBottomOf="@+id/label_abu"
             app:layout_constraintEnd_toEndOf="@+id/tv_serat"
-            app:layout_constraintTop_toBottomOf="@+id/tv_serat" />
+            app:layout_constraintTop_toTopOf="@+id/label_abu" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/label_kalsium"
@@ -249,10 +249,10 @@
             style="@style/TextView"
             android:layout_width="@dimen/dimen_0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
             android:text="@string/label_kalsium"
+            app:layout_constraintBottom_toBottomOf="@+id/label_kalsium"
             app:layout_constraintEnd_toEndOf="@+id/tv_abu"
-            app:layout_constraintTop_toBottomOf="@+id/tv_abu" />
+            app:layout_constraintTop_toTopOf="@+id/label_kalsium" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/label_fosfor"
@@ -269,9 +269,9 @@
             style="@style/TextView"
             android:layout_width="@dimen/dimen_0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
+            app:layout_constraintBottom_toBottomOf="@+id/label_fosfor"
             app:layout_constraintEnd_toEndOf="@+id/tv_kalsium"
-            app:layout_constraintTop_toBottomOf="@+id/tv_kalsium"
+            app:layout_constraintTop_toTopOf="@+id/label_fosfor"
             tools:text="@string/label_fosfor" />
 
         <androidx.appcompat.widget.AppCompatTextView
@@ -289,9 +289,9 @@
             style="@style/TextView"
             android:layout_width="@dimen/dimen_0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
+            app:layout_constraintBottom_toBottomOf="@+id/label_natrium"
             app:layout_constraintEnd_toEndOf="@+id/tv_fosfor"
-            app:layout_constraintTop_toBottomOf="@+id/tv_fosfor"
+            app:layout_constraintTop_toTopOf="@+id/label_natrium"
             tools:text="@string/label_natrium" />
 
         <androidx.appcompat.widget.AppCompatTextView
@@ -309,9 +309,9 @@
             style="@style/TextView"
             android:layout_width="@dimen/dimen_0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
+            app:layout_constraintBottom_toBottomOf="@+id/label_zat_besi"
             app:layout_constraintEnd_toEndOf="@+id/tv_natrium"
-            app:layout_constraintTop_toBottomOf="@+id/tv_natrium"
+            app:layout_constraintTop_toTopOf="@+id/label_zat_besi"
             tools:text="@string/label_zink" />
 
         <androidx.appcompat.widget.AppCompatTextView
@@ -329,9 +329,9 @@
             style="@style/TextView"
             android:layout_width="@dimen/dimen_0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
+            app:layout_constraintBottom_toBottomOf="@+id/label_kalium"
             app:layout_constraintEnd_toEndOf="@+id/tv_zat_besi"
-            app:layout_constraintTop_toBottomOf="@+id/tv_zat_besi"
+            app:layout_constraintTop_toTopOf="@+id/label_kalium"
             tools:text="@string/label_kalium" />
 
         <androidx.appcompat.widget.AppCompatTextView
@@ -349,9 +349,9 @@
             style="@style/TextView"
             android:layout_width="@dimen/dimen_0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
+            app:layout_constraintBottom_toBottomOf="@+id/label_tembaga"
             app:layout_constraintEnd_toEndOf="@+id/tv_kalium"
-            app:layout_constraintTop_toBottomOf="@+id/tv_kalium"
+            app:layout_constraintTop_toTopOf="@+id/label_tembaga"
             tools:text="@string/label_tembaga" />
 
         <androidx.appcompat.widget.AppCompatTextView
@@ -369,9 +369,9 @@
             style="@style/TextView"
             android:layout_width="@dimen/dimen_0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
+            app:layout_constraintBottom_toBottomOf="@+id/label_seng"
             app:layout_constraintEnd_toEndOf="@+id/tv_tembaga"
-            app:layout_constraintTop_toBottomOf="@+id/tv_tembaga"
+            app:layout_constraintTop_toTopOf="@+id/label_seng"
             tools:text="@string/label_seng" />
 
         <androidx.appcompat.widget.AppCompatTextView
@@ -390,6 +390,7 @@
             android:layout_width="@dimen/dimen_0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
+            app:layout_constraintBottom_toBottomOf="@+id/label_retinol"
             app:layout_constraintEnd_toEndOf="@+id/tv_seng"
             app:layout_constraintTop_toBottomOf="@+id/tv_seng"
             tools:text="@string/label_retinol" />
@@ -409,9 +410,9 @@
             style="@style/TextView"
             android:layout_width="@dimen/dimen_0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
+            app:layout_constraintBottom_toBottomOf="@+id/label_betakaroten"
             app:layout_constraintEnd_toEndOf="@+id/tv_retinol"
-            app:layout_constraintTop_toBottomOf="@+id/tv_retinol"
+            app:layout_constraintTop_toTopOf="@+id/label_betakaroten"
             tools:text="@string/label_betakaroten" />
 
         <androidx.appcompat.widget.AppCompatTextView
@@ -430,8 +431,9 @@
             android:layout_width="@dimen/dimen_0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
+            app:layout_constraintBottom_toBottomOf="@+id/label_karoten"
             app:layout_constraintEnd_toEndOf="@+id/tv_betakaroten"
-            app:layout_constraintTop_toBottomOf="@+id/tv_betakaroten"
+            app:layout_constraintTop_toTopOf="@id/label_karoten"
             tools:text="@string/label_karoten" />
 
         <androidx.appcompat.widget.AppCompatTextView
@@ -450,8 +452,9 @@
             android:layout_width="@dimen/dimen_0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
+            app:layout_constraintBottom_toBottomOf="@id/label_thiamin"
             app:layout_constraintEnd_toEndOf="@+id/tv_karoten"
-            app:layout_constraintTop_toBottomOf="@+id/tv_karoten"
+            app:layout_constraintTop_toTopOf="@id/label_thiamin"
             tools:text="@string/label_thiamin" />
 
         <androidx.appcompat.widget.AppCompatTextView
@@ -470,8 +473,9 @@
             android:layout_width="@dimen/dimen_0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
+            app:layout_constraintBottom_toBottomOf="@id/riboflavin"
             app:layout_constraintEnd_toEndOf="@+id/tv_thiamin"
-            app:layout_constraintTop_toBottomOf="@+id/tv_thiamin"
+            app:layout_constraintTop_toTopOf="@id/riboflavin"
             tools:text="@string/label_riboflavin" />
 
         <androidx.appcompat.widget.AppCompatTextView
@@ -482,7 +486,7 @@
             android:layout_marginTop="4dp"
             android:text="@string/label_niasin"
             app:layout_constraintStart_toStartOf="@+id/riboflavin"
-            app:layout_constraintTop_toBottomOf="parent" />
+            app:layout_constraintTop_toBottomOf="@id/riboflavin" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tv_niasin"
@@ -490,8 +494,9 @@
             android:layout_width="@dimen/dimen_0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
+            app:layout_constraintBottom_toBottomOf="@id/label_niasin"
             app:layout_constraintEnd_toEndOf="@+id/tv_riboflavin"
-            app:layout_constraintTop_toBottomOf="@+id/tv_riboflavin"
+            app:layout_constraintTop_toTopOf="@id/label_niasin"
             tools:text="@string/label_niasin" />
 
         <androidx.appcompat.widget.AppCompatTextView
@@ -510,8 +515,9 @@
             android:layout_width="@dimen/dimen_0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
+            app:layout_constraintBottom_toBottomOf="@id/label_vitamin_c"
             app:layout_constraintEnd_toEndOf="@+id/tv_niasin"
-            app:layout_constraintTop_toBottomOf="@+id/label_niasin"
+            app:layout_constraintTop_toTopOf="@id/label_vitamin_c"
             tools:text="@string/label_vitamin_c" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
