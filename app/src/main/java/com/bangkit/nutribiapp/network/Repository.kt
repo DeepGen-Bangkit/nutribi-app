@@ -2,12 +2,16 @@ package com.bangkit.nutribiapp.network
 
 import com.bangkit.nutribiapp.model.LoginRequest
 import com.bangkit.nutribiapp.model.LoginResponse
+import com.bangkit.nutribiapp.model.NutritionDetailRequest
+import com.bangkit.nutribiapp.model.NutritionDetailResponse
 import com.bangkit.nutribiapp.model.RegisterRequest
 import com.bangkit.nutribiapp.model.RegisterResponse
 import com.bangkit.nutribiapp.model.SearchIngredientItemResponse
 import com.bangkit.nutribiapp.model.SearchRecipeItemResponse
 import retrofit2.Response
+import retrofit2.http.Body
 import retrofit2.http.GET
+import retrofit2.http.POST
 import retrofit2.http.Query
 
 class Repository(private val apiService: ApiService) {
@@ -35,4 +39,11 @@ class Repository(private val apiService: ApiService) {
     ): Response<List<SearchRecipeItemResponse>> {
         return apiService.getSearchRecipe(ingredients, true)
     }
+
+    suspend fun postNutritionDetail(
+        nutritionDetailRequest:List<NutritionDetailRequest>
+    ): Response<NutritionDetailResponse> {
+        return apiService.postNutritionDetail(nutritionDetailRequest)
+    }
+
 }

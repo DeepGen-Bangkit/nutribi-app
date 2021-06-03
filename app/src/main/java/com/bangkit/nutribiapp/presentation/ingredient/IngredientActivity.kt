@@ -10,6 +10,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bangkit.nutribiapp.R
 import com.bangkit.nutribiapp.presentation.detail.SelectedFoodActivity
 import com.bangkit.nutribiapp.presentation.ingredient.adapter.IngredientAdapter
+import com.bangkit.nutribiapp.utils.DataObject
+import kotlinx.android.synthetic.main.activity_ingredient.btnClear
 import kotlinx.android.synthetic.main.activity_ingredient.btnNextIngredient
 import kotlinx.android.synthetic.main.activity_ingredient.rv_ingredients
 import kotlinx.android.synthetic.main.activity_ingredient.searchView
@@ -52,6 +54,7 @@ class IngredientActivity : AppCompatActivity() {
             }
 
             override fun onQueryTextSubmit(query: String): Boolean {
+                ingredientViewModel.getSearchIngredient(query)
                 return false
             }
         })
@@ -70,6 +73,10 @@ class IngredientActivity : AppCompatActivity() {
         }
 
         initSearch()
+
+        btnClear.setOnClickListener{
+            DataObject.searchRecipeResponse.clear()
+        }
     }
 
 //    private fun setDataDummy() {
@@ -92,5 +99,11 @@ class IngredientActivity : AppCompatActivity() {
             adapter = ingredientAdapter
             setRecycledViewPool(RecyclerView.RecycledViewPool())
         }
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+
+        DataObject.searchRecipeResponse.clear()
     }
 }

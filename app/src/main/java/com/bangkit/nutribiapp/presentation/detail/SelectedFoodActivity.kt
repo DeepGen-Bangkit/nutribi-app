@@ -42,16 +42,16 @@ class SelectedFoodActivity : AppCompatActivity() {
         setContentView(R.layout.activity_selected_food)
 
         initRecyclerView()
-        initObserver()
         setIngredientData()
         initAction()
+        initObserver()
 
         // Testing
 //        setDataDummy()
     }
 
     private fun initAction() {
-        btnNextSelectedIngredient.setOnClickListener{
+        btnNextSelectedIngredient.setOnClickListener {
             Log.d("TAG", "initAction: " + selectedIngredientAdapter.listData)
             DetailNutritionActivity.start(this)
         }
@@ -62,8 +62,18 @@ class SelectedFoodActivity : AppCompatActivity() {
     }
 
     private fun initObserver() {
-        recipeViewModel.getSearchRecipe("")
-        recipeViewModel.searchRecipeItemResponse.observe(this){
+        var name: String = ""
+
+        searchRecipeResponse.forEachIndexed { index, s ->
+            name += s.name
+
+            if(index != searchRecipeResponse.size - 1){
+                name += ","
+            }
+        }
+
+        recipeViewModel.getSearchRecipe(name)
+        recipeViewModel.searchRecipeItemResponse.observe(this) {
             recipeAdapter.setData(it)
         }
     }

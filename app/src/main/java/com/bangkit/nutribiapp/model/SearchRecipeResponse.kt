@@ -4,7 +4,8 @@ data class SearchRecipeItemResponse(
     val id: Int? = null,
     val step: List<Step>? = null,
     val ingredients: List<Ingredient>? = null,
-    val name: String? = null
+    val name: String? = null,
+    val image: String? = null
 )
 
 data class Step(

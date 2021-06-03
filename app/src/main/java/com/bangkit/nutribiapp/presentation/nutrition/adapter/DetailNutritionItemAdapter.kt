@@ -1,16 +1,13 @@
 package com.bangkit.nutribiapp.presentation.nutrition.adapter
 
-import android.graphics.drawable.PictureDrawable
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bangkit.nutribiapp.R
-import com.bangkit.nutribiapp.model.SearchIngredientItemResponse
+import com.bangkit.nutribiapp.model.Food
 import com.bangkit.nutribiapp.utils.GlideApp
-import com.bumptech.glide.Glide
-import com.bumptech.glide.load.engine.DiskCacheStrategy
 import kotlinx.android.synthetic.main.items_detail_ingredient.view.img_ingredient
 import kotlinx.android.synthetic.main.items_detail_ingredient.view.tv_fat
 import kotlinx.android.synthetic.main.items_detail_ingredient.view.tv_karbo
@@ -18,11 +15,11 @@ import kotlinx.android.synthetic.main.items_detail_ingredient.view.tv_name
 import kotlinx.android.synthetic.main.items_detail_ingredient.view.tv_protein
 import java.util.ArrayList
 
-class DetailNutritionAdapter : RecyclerView.Adapter<DetailNutritionAdapter.ListViewHolder>() {
+class DetailNutritionItemAdapter : RecyclerView.Adapter<DetailNutritionItemAdapter.ListViewHolder>() {
 
-    var listData = ArrayList<SearchIngredientItemResponse>()
+    var listData = ArrayList<Food>()
 
-    fun setData(newListData: List<SearchIngredientItemResponse>?) {
+    fun setData(newListData: List<Food>?) {
         if (newListData == null) return
         listData.clear()
         listData.addAll(newListData)
@@ -41,26 +38,23 @@ class DetailNutritionAdapter : RecyclerView.Adapter<DetailNutritionAdapter.ListV
 
     inner class ListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-        fun bind(data: SearchIngredientItemResponse) {
+        fun bind(data: Food) {
             with(itemView) {
-                tv_name.text = data.name
-                tv_fat.text = "Lemak " + (data.nutrition?.get(0)?.lemak ?: "-") + "/ 100g"
-                tv_karbo.text = "Karbohidrat " + (data.nutrition?.get(0)?.lemak ?: "-") + "/ 100g"
-                tv_protein.text = "Protein " + (data.nutrition?.get(0)?.lemak ?: "-") + "/ 100g"
+                tv_name.text = data.name ?: ""
+                tv_fat.text = "Lemak " + (data.nutrition?.lemak ?: "-")
+                tv_karbo.text = "Karbohidrat " + (data.nutrition?.carbo ?: "-")
+                tv_protein.text = "Protein " + (data.nutrition?.protein ?: "-")
+
+                Log.d("TAG", "bind: " + data.image?.takeLast(data.image.length - 10))
 
                 if("/https%3A/" == data.image?.take(10)){
                     Log.d("TAG", "bind: true")
-                    GlideApp.with(  this).load("https://"+data.image.takeLast(data.image.length - 10)).into(img_ingredient)
+                    GlideApp.with(this).load("https://"+data.image.takeLast(data.image.length - 10)).into(img_ingredient)
 //                    GlideApp.with(this).load("https://storage.googleapis.com/svg-image/seafood.svg").into(img_ingredient)
                 } else {
                     Log.d("TAG", "bind: false")
                     GlideApp.with(this).load(data.image).into(img_ingredient)
                 }
-
-//                GlideApp.with(this)
-//                    .load(data.image)
-//                    .into(img_ingredient)
-
             }
         }
     }
