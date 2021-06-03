@@ -2,15 +2,12 @@ package com.bangkit.nutribiapp.presentation.ingredient.detail
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.bangkit.nutribiapp.databinding.ActivityDetailIngredientBinding
-import com.bangkit.nutribiapp.model.Nutrition
-import com.bangkit.nutribiapp.model.SearchIngredientItemResponse
+import com.bangkit.nutribiapp.model.Food
 
 class DetailIngredientActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityDetailIngredientBinding
-    private lateinit var adapter: DetailIngredientAdapter
 
     companion object {
         const val EXTRA_INGREDIENT = "extra_ingredient"
@@ -22,9 +19,8 @@ class DetailIngredientActivity : AppCompatActivity() {
         binding = ActivityDetailIngredientBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        adapter = DetailIngredientAdapter()
 
-        val ingredient = intent.getParcelableExtra<SearchIngredientItemResponse>(EXTRA_INGREDIENT)
+        val ingredient = intent.getParcelableExtra<Food>(EXTRA_INGREDIENT)
 
         if (ingredient != null) {
             setupUI(ingredient)
@@ -33,21 +29,38 @@ class DetailIngredientActivity : AppCompatActivity() {
 
     }
 
-    private fun setupUI(ingredient: SearchIngredientItemResponse) {
+    private fun setupUI(ingredient: Food) {
 
         with(binding) {
-
             tvName.text = ingredient.name
-            tvGram.text = ingredient.gram.toString()
+            tvGram.text = ingredient.count.toString()
             tvCal.text = ingredient.kcal.toString()
 
-            if (ingredient.nutrition != null) {
+            //Nutrition
+            val nutrition = ingredient.nutrition
 
-            }
+            tvScoreKarbo.text = nutrition?.carbo
+            tvScoreProteion.text = nutrition?.protein
+            tvScoreFat.text = nutrition?.lemak
+
+            tvAir.text = nutrition?.air
+            tvSerat.text = nutrition?.serat
+            tvAbu.text = nutrition?.abu
+            tvKalsium.text = nutrition?.kalsium
+            tvFosfor.text = nutrition?.fosfor
+            tvZatBesi.text = nutrition?.besi
+            tvNatrium.text = nutrition?.natrium
+            tvKalium.text = nutrition?.kalium
+            tvTembaga.text = nutrition?.tembaga
+            tvSeng.text = nutrition?.seng
+            tvRetinol.text = nutrition?.retinol
+            tvBetakaroten.text = nutrition?.b_kar
+            tvKaroten.text = nutrition?.kar_total
+            tvThiamin.text = nutrition?.thiamin
+            tvRiboflavin.text = nutrition?.riboflavin
+            tvNiasin.text = nutrition?.niasin
+            tvVitaminC.text = nutrition?.vit_c
         }
     }
-
-
-
-
 }
+

@@ -1,5 +1,9 @@
 package com.bangkit.nutribiapp.model
 
+import android.os.Parcelable
+import kotlinx.android.parcel.Parcelize
+
+@Parcelize
 data class NutritionDetailResponse(
     val lemak_total: String? = null,
     val protein_total: String? = null,
@@ -8,17 +12,19 @@ data class NutritionDetailResponse(
     val food: List<Food>? = null,
     val lemak_presentase: String? = null,
     val protein_presentase: String? = null,
-    val carbo_presentase: String? = null,
-)
+    val carbo_presentase: String? = null
+) : Parcelable
 
+@Parcelize
 data class Food(
     val name: String? = null,
     val nutrition: NutritionDetail? = null,
     val kcal: Double? = null,
     val count: Int? = null,
     val image: String? = null
-)
+) : Parcelable
 
+@Parcelize
 data class NutritionDetail(
     val protein: String? = null,
     val carbo: String? = null,
@@ -41,4 +47,4 @@ data class NutritionDetail(
     val riboflavin: String? = null,
     val niasin: String? = null,
     val vit_c: String? = null
-)
+) : Parcelable
