@@ -11,6 +11,7 @@
         style="@style/TextView.Purple"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_16dp"
         android:layout_marginBottom="@dimen/dimen_4dp"
         android:textStyle="bold"
         tools:text="Langkah 1" />
@@ -20,6 +21,7 @@
         style="@style/TextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dimen_16dp"
         tools:text="Tumis bawang putih cincang sampai harum, masukkan potongan bakwan dan brokoli. Masak hingga matang kurang lebih 5-10 menit s di makan dg potongan cabe. Selamat mencoba" />
 
 </LinearLayout>

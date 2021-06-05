@@ -4,11 +4,19 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginBottom="@dimen/dimen_4dp"
-    android:orientation="vertical">
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/img_ingredient_recipe"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@color/black"
+        android:layout_marginStart="@dimen/dimen_8dp"/>
 
     <TextView
         android:id="@+id/tv_ingredient"
         style="@style/TextView"
+        android:layout_marginStart="@dimen/dimen_8dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         tools:text="1 bh bawang bombay ukurang sedang" />

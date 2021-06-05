@@ -64,7 +64,7 @@ class DetailNutritionActivity : AppCompatActivity() {
             val valueFat: Number = format.parse(it.lemak_presentase)
 
             with(binding){
-                tvKcal.text = it.kcal_total
+                tvKcal.text = it.kcal_total + " kcal"
                 tvFat.text = it.lemak_total
                 tvProtein.text = it.protein_total
                 tvKarbo.text = it.carbo_total

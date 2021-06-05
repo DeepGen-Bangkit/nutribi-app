@@ -16,9 +16,10 @@
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/img_resep"
-            android:layout_width="@dimen/dimen_120dp"
-            android:layout_height="@dimen/dimen_120dp"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
             android:background="@color/colorGrey"
+            android:scaleType="fitXY"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -29,22 +30,52 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="8dp"
             android:textSize="15sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/img_resep"
             app:layout_constraintTop_toTopOf="parent"
             tools:text="Brocoli Tabouleh" />
 
-        <!--        <androidx.appcompat.widget.AppCompatTextView-->
-        <!--            android:id="@+id/tv_content"-->
-        <!--            style="@style/TextView.OrangeDark"-->
-        <!--            android:layout_width="wrap_content"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:layout_marginTop="4dp"-->
-        <!--            app:layout_constraintStart_toStartOf="@+id/tv_title"-->
-        <!--            app:layout_constraintTop_toBottomOf="@+id/tv_title"-->
-        <!--            tools:text="100gram" />-->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_kcal"
+            style="@style/TextView.OrangeDark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            app:layout_constraintStart_toStartOf="@+id/tv_title"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title"
+            tools:text="100 kcal" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_karbo"
+            style="@style/TextView.OrangeDark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            app:layout_constraintStart_toStartOf="@+id/tv_title"
+            app:layout_constraintTop_toBottomOf="@+id/tv_kcal"
+            tools:text="Karbohidrat 100g" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_protein"
+            style="@style/TextView.OrangeDark"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            app:layout_constraintStart_toStartOf="@+id/tv_karbo"
+            app:layout_constraintTop_toBottomOf="@+id/tv_karbo"
+            tools:text="@string/label_proteion" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_fat"
+            style="@style/TextView.OrangeDark"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            app:layout_constraintStart_toStartOf="@+id/tv_protein"
+            app:layout_constraintTop_toBottomOf="@+id/tv_protein"
+            tools:text="@string/label_lemak" />
 
         <!--        <ImageView-->
         <!--            android:id="@+id/img_star"-->

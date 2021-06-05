@@ -45,28 +45,23 @@ class RecipeAdapter : RecyclerView.Adapter<RecipeAdapter.ListViewHolder>() {
             with(itemView) {
                 tv_title.text = data.name
                 Glide.with(context).load(data.image).into(img_resep)
+                tv_kcal.text = data.kcal_total.toString() + " kcal"
+                tv_fat.text = "Lemak " + data.lemak_total.toString() + " g"
+                tv_karbo.text = "Karbohidrat " + data.karbo_total.toString() + " g"
+                tv_protein.text = "Protein " + data.protein_total.toString() + " g"
 
-                Log.d("TAG", "bind: " + data.image)
 
-                if("/https%3A/" == data.image?.take(10)){
-                    Glide.with(context).load("https://"+data.image.takeLast(data.image.length - 10)).into(img_resep)
-                } else {
-                    Glide.with(context).load(data.image).into(img_resep)
-                }
+//                Log.d("TAG", "bind: " + data.image)
+//
+//                if ("/https%3A/" == data.image?.take(10)) {
+//                    Glide.with(context).load("https://" + data.image.takeLast(data.image.length - 10)).into(img_resep)
+//                } else {
+//                    Glide.with(context).load(data.image).into(img_resep)
+//                }
 
                 setOnClickListener {
                     DetailRecipeActivity.start(context, data)
                 }
-//
-//                if("/https%3A/" == data.image?.take(10)){
-//                    Glide.with(context).load("https://"+data.image.takeLast(data.image.length - 10)).into(img_resep)
-//                } else {
-//                    Glide.with(this).load(data.image).into(img_ingredient)
-//                }
-
-//                setOnClickListener {
-//                    DetailRecipeActivity.start(context)
-//                }
             }
         }
     }

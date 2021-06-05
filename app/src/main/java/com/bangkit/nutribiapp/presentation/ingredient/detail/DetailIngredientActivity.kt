@@ -40,8 +40,8 @@ class DetailIngredientActivity : AppCompatActivity() {
 
         with(binding) {
             tvName.text = ingredient.name
-            tvGram.text = ingredient.count.toString()
-            tvCal.text = ingredient.kcal.toString()
+            tvGram.text = ingredient.count.toString() + " g"
+            tvCal.text = ingredient.kcal.toString() + " kcal"
 
             //Nutrition
             val nutrition = ingredient.nutrition
