@@ -15,9 +15,6 @@ class IngredientViewModel(private val repository: Repository) : ViewModel() {
     var searchIngredientItemResponse: MutableLiveData<List<SearchIngredientItemResponse>> = MutableLiveData()
     var nutritionDetailResponse: MutableLiveData<NutritionDetailResponse> = MutableLiveData()
 
-//    var loginResponse: MutableLiveData<LoginResponse> = MutableLiveData()
-//    var registerResponse: MutableLiveData<RegisterResponse> = MutableLiveData()
-
     fun getSearchIngredient(name: String) {
         viewModelScope.launch {
             try {

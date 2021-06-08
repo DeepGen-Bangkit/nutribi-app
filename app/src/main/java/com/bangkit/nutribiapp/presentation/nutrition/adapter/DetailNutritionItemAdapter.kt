@@ -10,6 +10,7 @@ import com.bangkit.nutribiapp.model.Food
 import com.bangkit.nutribiapp.presentation.ingredient.detail.DetailIngredientActivity
 import com.bangkit.nutribiapp.utils.GlideApp
 import kotlinx.android.synthetic.main.items_detail_ingredient.view.img_ingredient
+import kotlinx.android.synthetic.main.items_detail_ingredient.view.tv_count
 import kotlinx.android.synthetic.main.items_detail_ingredient.view.tv_fat
 import kotlinx.android.synthetic.main.items_detail_ingredient.view.tv_karbo
 import kotlinx.android.synthetic.main.items_detail_ingredient.view.tv_name
@@ -42,11 +43,10 @@ class DetailNutritionItemAdapter : RecyclerView.Adapter<DetailNutritionItemAdapt
         fun bind(data: Food) {
             with(itemView) {
                 tv_name.text = data.name ?: ""
+                tv_count.text = "Jumlah " + data.count + " g"
                 tv_fat.text = "Lemak " + (data.nutrition?.lemak ?: "-")
                 tv_karbo.text = "Karbohidrat " + (data.nutrition?.carbo ?: "-")
                 tv_protein.text = "Protein " + (data.nutrition?.protein ?: "-")
-
-                Log.d("TAG", "bind: " + data.image?.takeLast(data.image.length - 10))
 
                 if("/https%3A/" == data.image?.take(10)){
                     Log.d("TAG", "bind: true")

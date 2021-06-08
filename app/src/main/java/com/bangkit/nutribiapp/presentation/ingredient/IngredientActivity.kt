@@ -49,7 +49,7 @@ class IngredientActivity : AppCompatActivity() {
         searchView.setOnQueryTextListener(object : OnQueryTextListener {
 
             override fun onQueryTextChange(newText: String): Boolean {
-                ingredientViewModel.getSearchIngredient(newText)
+//                ingredientViewModel.getSearchIngredient(newText)
                 return false
             }
 

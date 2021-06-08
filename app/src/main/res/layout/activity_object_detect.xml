@@ -16,7 +16,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="@string/tv_placeholder"
+            android:text="Object Detection"
             android:textAlignment="center"
             android:textSize="40sp" />
 
@@ -37,7 +37,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
-        android:text="@string/tv_description" />
+        android:text="Pilih gambar yang sudah disediakan atau ambil foto" />
 
     <LinearLayout
         android:id="@+id/llSampleImage"
@@ -86,11 +86,13 @@
         android:layout_gravity="center|bottom"
         android:layout_margin="16dp"
         android:drawableLeft="@drawable/ic_camera"
-        android:text="@string/tv_take_photo"
+        android:text="Ambil Foto"
         android:textAllCaps="false" />
 
     <Button
         android:id="@+id/btnNextDetection"
+        android:textColor="@color/selector_default_white_button_text"
+        android:backgroundTint="@color/selector_default_white_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"

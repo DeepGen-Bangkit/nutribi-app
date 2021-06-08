@@ -88,6 +88,8 @@ class ObjectDetection : AppCompatActivity(), View.OnClickListener {
         imgSampleThree = findViewById(R.id.imgSampleThree)
         tvPlaceholder = findViewById(R.id.tvPlaceholder)
 
+        setButtonNextFalseDefault()
+
         captureImageFab.setOnClickListener(this)
         imgSampleOne.setOnClickListener(this)
         imgSampleTwo.setOnClickListener(this)
@@ -138,6 +140,10 @@ class ObjectDetection : AppCompatActivity(), View.OnClickListener {
      */
     private fun runObjectDetection(bitmap: Bitmap) {
 
+        runOnUiThread {
+            setButtonNextFalse()
+        }
+
         val image = TensorImage.fromBitmap(bitmap)
         val options = ObjectDetector.ObjectDetectorOptions.builder()
             .setMaxResults(5)
@@ -152,7 +158,7 @@ class ObjectDetection : AppCompatActivity(), View.OnClickListener {
         val resultToDisplay = results.map {
             // Get the top-1 category and craft the display text
             val category = it.categories.first()
-            val text = "${category.label},== ,${category.score.times(100).toInt()}%"
+            val text = "${category.label} - ${category.score.times(100).toInt()}%"
 
             // Create a data object to display the detection result
             DetectionResult(it.boundingBox, text)
@@ -204,12 +210,31 @@ class ObjectDetection : AppCompatActivity(), View.OnClickListener {
                 }
             }
 
-            if(index != mutableSetResults.size - 1){
+            if (index != mutableSetResults.size - 1) {
                 name += ","
             }
         }
 
         ingredients = name
+
+        runOnUiThread {
+            setButtonNextTrue()
+        }
+    }
+
+    private fun setButtonNextTrue() {
+        btnNextDetection.isEnabled = true
+        btnNextDetection.text = "Selanjutnya"
+    }
+
+    private fun setButtonNextFalse() {
+        btnNextDetection.isEnabled = false
+        btnNextDetection.text = "Harap Tunggu..."
+    }
+
+    private fun setButtonNextFalseDefault() {
+        btnNextDetection.isEnabled = false
+        btnNextDetection.text = "Masukkan foto terlebih dahulu"
     }
 
     /**

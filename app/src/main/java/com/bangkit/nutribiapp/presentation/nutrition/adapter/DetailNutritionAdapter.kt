@@ -12,6 +12,7 @@ import com.bangkit.nutribiapp.utils.GlideApp
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import kotlinx.android.synthetic.main.items_detail_ingredient.view.img_ingredient
+import kotlinx.android.synthetic.main.items_detail_ingredient.view.tv_count
 import kotlinx.android.synthetic.main.items_detail_ingredient.view.tv_fat
 import kotlinx.android.synthetic.main.items_detail_ingredient.view.tv_karbo
 import kotlinx.android.synthetic.main.items_detail_ingredient.view.tv_name
@@ -44,6 +45,7 @@ class DetailNutritionAdapter : RecyclerView.Adapter<DetailNutritionAdapter.ListV
         fun bind(data: SearchIngredientItemResponse) {
             with(itemView) {
                 tv_name.text = data.name
+                tv_count.visibility = View.GONE
                 tv_fat.text = "Lemak " + (data.nutrition?.get(0)?.lemak ?: "-") + "/ 100g"
                 tv_karbo.text = "Karbohidrat " + (data.nutrition?.get(0)?.lemak ?: "-") + "/ 100g"
                 tv_protein.text = "Protein " + (data.nutrition?.get(0)?.lemak ?: "-") + "/ 100g"
